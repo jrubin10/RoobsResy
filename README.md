@@ -12,8 +12,8 @@ Neither .env nor auth.json will be uploaded here since they are part of .gitigno
 
 You need to give the apps.js variables for the venue and date:
 
-*VenueID -- get this by going to resy and looking in the chrome dev console to get the VenueID
-*Day -- choose your date in the format that's in the code
+*VenueID -- get this by going to resy and looking in the chrome dev console to get the VenueID\
+*Day -- choose your date in the format that's in the code\
 *Earliest Time -- optional if you want to put a limit on the earliest time of day it will try to book
 
 # Ideas:
