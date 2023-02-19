@@ -184,6 +184,7 @@ var day = '2023-03-05';
 var EarliestTime ="17:45:00"
 var partySize = '4';
 //var venueId='60058';//monkeybar
+//var venueId='66435';//random restaurant haven't checked yet
 var venueId = '66436';//empellon
 var bookToken;
 
