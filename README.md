@@ -26,3 +26,7 @@ You need to give the apps.js variables for the venue and date:
 
 *Figure out how to collect other users authentication information if others want to use the code
 
+*Create an API using Express Framework
+
+*Tap into the notify workflow for the situation where you set up a notification --> Reservation dropped and Resy sends notification (maybe use the email they send? Or maybe there's a more direct notification possible?) --> kick off code to immediately get the reservation
+
