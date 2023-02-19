@@ -14,11 +14,11 @@ You need to give the apps.js variables the VenueID by going to resy and looking 
 
 # Ideas:
 
-Separate each function into it's own files for easier updates
+*Separate each function into it's own files for easier updates
 
-Speed up code by using the known structure of variable bookConfigId in order to continuously try making the booking instead of getting the slotsAvailable array first and then parsing through it. We don't need to know what's available. We can start trying and if it fails keep running through the known times a particular restaurant publishes
+*Speed up code by using the known structure of variable bookConfigId in order to continuously try making the booking instead of getting the slotsAvailable array first and then parsing through it. We don't need to know what's available. We can start trying and if it fails keep running through the known times a particular restaurant publishes
 
-Add input UI for users to enter their restaurant, times, and dates in order to collect info rather than updating variables in the code
+*Add input UI for users to enter their restaurant, times, and dates in order to collect info rather than updating variables in the code
 
-Figure out how to collect other users authentication information if others want to use the code
+*Figure out how to collect other users authentication information if others want to use the code
 
