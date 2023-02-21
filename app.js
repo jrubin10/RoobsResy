@@ -158,7 +158,7 @@ async function scheduledTask() {
           bookConfigId = slotsAvailable[indexAfterMinTime];
           bookToken = await getBookToken(TokenBaseUrl, day, partySize, bookConfigId);
           console.log('Trying  -->' + slotsAvailable[indexAfterMinTime]);
-          reservationId = await makeBooking(MakeBaseUrl, bookToken);
+          //reservationId = await makeBooking(MakeBaseUrl, bookToken);
           console.log('SUCCESS --> ReservationID='+reservationId);
           indexAfterMinTime++;
         }
@@ -180,12 +180,12 @@ var TokenBaseUrl = 'https://api.resy.com/3/details';
 var MakeBaseUrl ='https://api.resy.com/3/book';
 var lat = '40.722653';
 var long = '-73.998739';
-var day = '2023-03-05';
+var day = '2023-03-01';
 var EarliestTime ="17:45:00"
-var partySize = '4';
-//var venueId='60058';//monkeybar
+var partySize = '5';
+var venueId='60058';//monkeybar
 //var venueId='66435';//random restaurant haven't checked yet
-var venueId = '66436';//empellon
+//var venueId = '66436';//empellon
 var bookToken;
 
 //--------------------------------------------
@@ -193,5 +193,7 @@ var bookToken;
 //Cron Job Schedules the task
 //ScheduledTask() without the Cron job can be used to check if everything's working before scheduling a job
 //--------------------------------------------
-cron.schedule('0 09 * * 0', scheduledTask);
-//scheduledTask();
+//cron.schedule('0 09 * * 0', scheduledTask);
+scheduledTask();
+
+module.exports={getBookToken};

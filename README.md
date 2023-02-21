@@ -14,7 +14,12 @@ You need to give the apps.js variables for the venue and date:
 
 *VenueID -- get this by going to resy and looking in the chrome dev console to get the VenueID\
 *Day -- choose your date in the format that's in the code\
-*Earliest Time -- optional if you want to put a limit on the earliest time of day it will try to book
+*Earliest Time -- optional if you want to put a limit on the earliest time of day it will try to book\
+\
+*The structure of the rgs link is:\
+rgs://resy/{{VenueID}}/{{TemplateID}}/{Template#}/{{Date}}/{{Date}}/{{Time}}/{{PartySize}}/{{TableConfig}}
+rgs://resy/66436/1943671/2/2023-03-05/2023-03-05/17:00:00/4/Indoors
+
 
 # Ideas:
 
