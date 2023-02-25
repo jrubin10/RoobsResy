@@ -69,15 +69,44 @@ var rgsCodePart2 = `/5/Dining Room`;
 const rgsCodesArray = timeArray.map(time => `rgs://resy/${venueId}/${templateId}/${templateNum}/${day}/${day}/${time}/5/Dining Room`);
 var bookToken;
 
-async function scheduledTask()
-{
-  const BookingCodesArray = await Promise.all(rgsCodesArray.map(rgscodes => getBookToken(TokenBaseUrl, day, partySize, rgscodes)));
-  console.log(BookingCodesArray)
-};
+
+async function getBookingTokenArray() {
+  const bookingArray = await Promise.all(rgsCodesArray.map(async (rgscodes) => {
+    const bookingToken = await getBookToken(TokenBaseUrl, day, partySize, rgscodes);
+    return {
+      'TokenBaseUrl': TokenBaseUrl,
+      'day': day,
+      'partySize': partySize,
+      'rgscodes': rgscodes,
+      'bookingToken': bookingToken
+    };
+  }));
+
+  const jsonData = JSON.stringify(bookingArray);
+  fs.writeFileSync('BookingArray.json', jsonData);
+
+  return bookingArray;
+}
+
+
+async function makeMultipleBookings(baseUrl, filename) {
+  // Read the booking codes array from the JSON file
+  const jsonData = fs.readFileSync(filename);
+  const bookingCodesArray = JSON.parse(jsonData);
+
+  const promises = bookingCodesArray.map((bookingCode) => {
+    return makeBooking(baseUrl, bookingCode);
+  });
+
+  return Promise.all(promises);
+}
 //--------------------------------------------
 //---------RUN THE JOB-----------------------
 //Cron Job Schedules the tasks
 //ScheduledTask() without the Cron job can be used to check if everything's working before scheduling a job
 //--------------------------------------------
 //cron.schedule('0 09 * * 0', scheduledTask);
-scheduledTask();
+
+getBookingTokenArray();
+
+//makeMultipleBookings("BookingArray.json");
