@@ -23,11 +23,15 @@ rgs://resy/66436/1943671/2/2023-03-05/2023-03-05/17:00:00/4/Indoors
 
 # Ideas:
 
-*Separate each function into it's own files for easier updates
+*Separate each function into it's own files for easier updates\
 
-*Speed up code by using the known structure of variable bookConfigId in order to continuously try making the booking instead of getting the slotsAvailable array first and then parsing through it. We don't need to know what's available. We can start trying and if it fails keep running through the known times a particular restaurant publishes
+*Speed up code by using the known structure of variable bookConfigId in order to continuously try making the booking instead of getting the slotsAvailable array first and then parsing through it. We don't need to know what's available. We can start trying and if it fails keep running through the known times a particular restaurant publishes\
 
-*Add input UI for users to enter their restaurant, times, and dates in order to collect info rather than updating variables in the code
+*Add input UI for users to enter their restaurant, times, and dates in order to collect info rather than updating variables in the code\
 
-*Figure out how to collect other users authentication information if others want to use the code
+*Figure out how to collect other users authentication information if others want to use the code\
+
+*Create an API using Express Framework\
+
+*Tap into the notify workflow for the situation where you set up a notification --> Reservation dropped and Resy sends notification (maybe use the email they send? Or maybe there's a more direct notification possible?) --> kick off code to immediately get the reservation
 
