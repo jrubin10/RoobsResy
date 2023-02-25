@@ -6,6 +6,7 @@ const JR_resy_email = process.env.JR_resy_email;
 
 
 async function authenticate(baseUrl,email,password) {
+  console.log("trying authenticate function");
   return new Promise((resolve, reject) => {
     const authenticateOptions = {
       method: 'POST',
@@ -40,6 +41,7 @@ async function authenticate(baseUrl,email,password) {
 }
 
 module.exports={authenticate};
+
 // (async () => {
-//   const JR_X_ResyAuth=await authenticate('https://api.resy.com/3/auth/password',JR_resy_email,JR_resy_password);
+// const JR_X_ResyAuth=await authenticate('https://api.resy.com/3/auth/password',JR_resy_email,JR_resy_password);
 // })();

@@ -15,14 +15,20 @@ const cron = require('node-cron');
 
 // Schedule job to run every Saturday at 9PM
 //cron.schedule('01 21 * * 6',
-async () => {
+(async () => {
   try {
-    fs.writeFileSync('./auth.json', await authenticate('https://api.resy.com/3/auth/password',JR_resy_email,JR_resy_password));
+    console.log(JR_resy_email + " " + JR_resy_password);
+    const auth = await authenticate('https://api.resy.com/3/auth/password',JR_resy_email,JR_resy_password);
+    console.log(auth);
+    fs.writeFileSync('./auth.json', auth);
     console.log('Auth token saved to auth.json');
   } catch (error) {
     console.error('Error getting auth token:', error);
   }
-}
+})();
+
+
+
 //);
 
 
