@@ -8,13 +8,13 @@ const JR_resy_password = process.env.JR_resy_password;
 const JR_resy_email = process.env.JR_resy_email;
 
 const fs = require('fs');
-const { authenticate } = require('./authenticate');
+const { authenticate } = require('./Authenticate');
 const { makeVenueFindRequest } = require('./app');
 
 const cron = require('node-cron');
 
 // Schedule job to run every Saturday at 9PM
-cron.schedule('01 21 * * 6',
+//cron.schedule('01 21 * * 6',
 async () => {
   try {
     fs.writeFileSync('./auth.json', await authenticate('https://api.resy.com/3/auth/password',JR_resy_email,JR_resy_password));
@@ -22,6 +22,7 @@ async () => {
   } catch (error) {
     console.error('Error getting auth token:', error);
   }
-});
+}
+//);
 
 

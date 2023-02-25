@@ -2,7 +2,11 @@
 
 Apps.js is the driver file with the main code at the bottom. It kicks off the scheduled reservation.
 
-Before running it, you need to set up your .env file in order to add your personal credentials. The variables they need to align to are at the top of App.js and Authenticate.js
+Before running it, you need to set up your .env file in order to add your personal credentials. The variables they need to align to are at the top of App.js and Authenticate.js:/
+JR_ResyAPI/
+JR_resy_password/
+JR_resy_email/
+JR_X_ResyAuth/
 
 Before running it, you need to authenticate to Resy once using Index.js which will add your authentication token to your own auth.json
 
