@@ -1,7 +1,10 @@
 require('dotenv').config();
 //INSTRUCTIONS: You need a .env file that has your details for the JR_... variables below
 
-const request = require('request');
+let request = require('request');
+const cookieJar = request.jar();
+request = request.defaults({jar:cookieJar})
+
 const JR_ResyAPI = process.env.JR_ResyAPI;
 const JR_resy_password = process.env.JR_resy_password;
 const JR_resy_email = process.env.JR_resy_email;
@@ -28,6 +31,7 @@ async function makeVenueFindRequest(baseUrl, lat, long, day, partySize, venueId)
         
           if (response.statusCode === 200) {
             console.log('Find API call successful');
+            console.log("MakeVenueFind: "+cookieJar.getCookieString(venueFindOptions));
             } else {
               console.log('Find API call unsuccessful, status code:', response.statusCode);
             }
@@ -70,6 +74,7 @@ async function getBookToken(baseUrl, day, partySize, config_id) {
 
       if (response.statusCode === 200) {
         console.log('get Token API call successful');
+        console.log("getBookToken: "+cookieJar.getCookieString(venueBookOptions));
       } else {
         console.log('get Token call unsuccessful, status code:', response.statusCode);
       }
@@ -106,6 +111,7 @@ async function makeBooking(baseUrl,API_bookToken) {
   
         if (response.statusCode === 200 || response.statusCode===201) {
           console.log('Make Booking API call successful');
+          console.log("makeBooking: "+cookieJar.getCookieString(makeBookOptions));
         } else {
           console.log('Make Booking API call unsuccessful, status code:', response.statusCode);
         console.log (makeBookOptions)
@@ -147,6 +153,7 @@ async function scheduledTask() {
 
     try {
         await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 second
+        console.log("DEBUG CEHCK")
         const slotsAvailable = await makeVenueFindRequest(FindBaseUrl, lat, long, day, partySize, venueId);
         console.log (slotsAvailable);
         let indexAfterMinTime = await findindexAfterMinTime(slotsAvailable);
@@ -194,6 +201,6 @@ var bookToken;
 //ScheduledTask() without the Cron job can be used to check if everything's working before scheduling a job
 //--------------------------------------------
 //cron.schedule('0 09 * * 0', scheduledTask);
-scheduledTask();
+//scheduledTask();
 
 module.exports={getBookToken};

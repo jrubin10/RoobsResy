@@ -1,5 +1,9 @@
 require('dotenv').config();
-const request = require('request');
+
+let request = require('request');
+const cookieJar = request.jar();
+request = request.defaults({jar:cookieJar})
+
 const JR_ResyAPI = process.env.JR_ResyAPI;
 const JR_resy_password = process.env.JR_resy_password;
 const JR_resy_email = process.env.JR_resy_email;
@@ -29,6 +33,7 @@ async function authenticate(baseUrl,email,password) {
 
       if (response.statusCode === 200) {
         console.log('Auth API call successful');
+        console.log("authenticate: "+cookieJar.getCookieString(authenticateOptions));
       } else {
         console.log('Auth API call unsuccessful, status code:', response.statusCode);
       }

@@ -1,0 +1,37 @@
+This request worked:
+
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': 'https://api.resy.com/3/book',
+  'headers': {
+    'authority': 'api.resy.com',
+    'accept': 'application/json, text/plain, */*',
+    'accept-language': 'en-US,en;q=0.9',
+    'authorization': 'ResyAPI api_key="VbWk7s3L4KiK5fzlO7JD3Q5EYolJI7n5"',
+    'cache-control': 'no-cache',
+    'content-type': 'application/x-www-form-urlencoded',
+    'origin': 'https://widgets.resy.com',
+    'referer': 'https://widgets.resy.com/',
+    'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+    'x-origin': 'https://widgets.resy.com',
+    'x-resy-auth-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJleHAiOjE2ODEzMjExMjEsInVpZCI6MjM3MDA3LCJndCI6ImNvbnN1bWVyIiwiZ3MiOltdLCJsYW5nIjoiZW4tdXMiLCJleHRyYSI6eyJndWVzdF9pZCI6MTk1Mjg5NH19.AB2ATBOhf6SQj4V560XCw52_8oVokkfQ4kX4zcF9qlwI8XUeRB0ZSUV0q7Ql9054l0IazHO6n-0yww4EXP8ikI-MASXeJ4u9pP3wrzobRCCMkr8LW7LCYdFIiTNQ7oKld6Xdo2Ylfy0wyCwt56PuKZrhXNMOqGx-ygFNDlKjLzCGJPWC',
+    'x-resy-universal-auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJleHAiOjE2ODEzMjExMjEsInVpZCI6MjM3MDA3LCJndCI6ImNvbnN1bWVyIiwiZ3MiOltdLCJsYW5nIjoiZW4tdXMiLCJleHRyYSI6eyJndWVzdF9pZCI6MTk1Mjg5NH19.AB2ATBOhf6SQj4V560XCw52_8oVokkfQ4kX4zcF9qlwI8XUeRB0ZSUV0q7Ql9054l0IazHO6n-0yww4EXP8ikI-MASXeJ4u9pP3wrzobRCCMkr8LW7LCYdFIiTNQ7oKld6Xdo2Ylfy0wyCwt56PuKZrhXNMOqGx-ygFNDlKjLzCGJPWC',
+    'Cookie': '__stripe_mid=07cfb1ac-b102-4ca2-80bf-28eb4712d52b32c634; __stripe_sid=1e3a47aa-e936-4c72-908e-47f8752dcc70343a75; _fbp=fb.1.1677433141709.684217654; _gat=1; _gat_combinedWeb=1; mp_b1d564cb7851691af650c4ca85b79385_mixpanel=%7B%22distinct_id%22%3A%20237007%2C%22%24device_id%22%3A%20%221868ece786437b-02d2b59e8363d4-74525470-e1000-1868ece78658ba%22%2C%22Widget%22%3A%20false%2C%22Platform%22%3A%20%22Desktop%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%2C%22%24user_id%22%3A%20237007%7D; uuid=b61cafa2-be30-4014-9e62-157b591f5f76'
+  },
+  form: {
+    'book_token': 'Rwr84aI1OTVYBtZOzTZBOrQi4uA4bfem8wX49Mc65_|KSVFCBLgqOd207PAtnR_0x4YJA2m_iYZSgRauCV32QY4bzH3ZISsdzm4JRHfKvOSB_FvBILJBnnQ1gPUHRzT4d5jRbrn0FbM5hcwsqlBT61_QjFi0OZ6rF8ATv7Kb5RIiMQgQW1jYIF7Ef7xq6NsHMjMrW873Jv8W_BpusO1OYkGxpa1S8IaejaqYZuDHwAJbcHlR45ZsH48OqEAjJznoApXEOePQkg0ZHf8cMbQh3xkRTkNfuoDV6TdTIStOsbcnUHIj|FnCJ0uo_xkhb6IxU8r|wxGxoCfLvygnHQBJf3cnauS3QKWstnfS8BzOmsACuE8BgteMCS3NhSEM|fbJs3|SsrUt3b8cVn6H0SRGIhJ6kjoNUFXwTzF4VQ3nJy|QCugfCDpWax4JA|TkToCdiGhHKFUN959xabGxIYvfp3emZ74RaeQxupOvR2kySstu4EW3evgFrxu1L4RxYkVOr_5h7EGs77zt1OQ4cFtyP1p|DwgUGOUzvz8O6eYMb6K|j00wMU6|VkOUQR82xVY|FHL3BJCRnvkMfvbikd6GrcPP|xo7TmJVo_wLijI7kdvOhzecT3u7aavBW3n8jldHfUxx0h7MZUxhZpBeMFjCPrZzZegMf8mlJ7lifHoEqjBHZXinQmu19ggwADGQZIO_s9JCJvTKqtweF1C|FAkjlVQKWT8LZaEh07zRgX5YC7drJjAz9wc3_muwHHrorgz9NgwIO4PPIfVv2wc|5xSxJKmeCfe_u0nIAD6ZoFp1wiKQIrBVYYsp6M8QRDCjJLI0ApnzU0C8Y0zscBWhqkCzc2P8IbtC47BZEHQ9rPicxT3n|0IFug6NxHdK|D2ErA5UYttvezKVKuV|khcSyQUep1LMl4B|9uFonR7AHyR0E_h9VnR9OlhXMMJTyrWURh1cLGmEjJrwqMFvOjtcBk|6StnDFFcOInqNZFRWleEzOx_g1Ekc3EDYxXmNpmcJ|oZnSOPYqfL8jX_Ma7aq0nvndMfQNpj_k1EllnpdkV4EfFe6PoKhwcqrq3hB|wWqVt4o|zNlEtp70LYu_OLSZMuWQA==-3f7b071699a623b1cbbdb3d58a994a38ad42bd388110e95f4cfbd47c',
+    'struct_payment_method': '{"id":5753141}',
+    'source_id': 'resy.com-venue-details'
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
