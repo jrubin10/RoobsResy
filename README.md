@@ -39,3 +39,6 @@ rgs://resy/66436/1943671/2/2023-03-05/2023-03-05/17:00:00/4/Indoors
 
 *Tap into the notify workflow for the situation where you set up a notification --> Reservation dropped and Resy sends notification (maybe use the email they send? Or maybe there's a more direct notification possible?) --> kick off code to immediately get the reservation
 
+# Where did i leave off?
+* Inside MakeReservation.js at the bottom where the make multiple bookings function is commented out.
+* BookingArray.json gets the new Json file and needs to be sent to make the booking
