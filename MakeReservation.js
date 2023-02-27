@@ -1,6 +1,3 @@
-//Currently makes an array of the booking tokens based on the variables put in the file.
-//Next step: iterate through and book directly. Loop through and try again on a failure and keep parsing through the times.
-
 require('dotenv').config();
 //INSTRUCTIONS: You need a .env file that has your details for the JR_... variables below
 
@@ -20,23 +17,55 @@ const { getBookToken } = require('./app');
 async function makeBooking(API_bookToken,resRGS) {
   let baseUrl='https://api.resy.com/3/book?';
   let paymentMethodId=5753141;
-  console.log (baseUrl+API_bookToken);
+  console.log ("Testing:"+baseUrl+"-->"+API_bookToken);
     return new Promise((resolve, reject) => {
-      const makeBookOptions = {
-        method: 'POST',
-        url: `${baseUrl}?`,
-        headers: {
-          'X-Resy-Auth-Token':JR_X_ResyAuth,
-          Authorization: JR_ResyAPI
+      const makeBookOptions = 
+      {
+        'method': 'POST',
+        'url': 'https://api.resy.com/3/book',
+        'headers': {
+          authority: 'api.resy.com',
+          accept: 'application/json, text/plain, */*',
+          'accept-language': 'en-US,en;q=0.9',
+          'authorization': JR_ResyAPI,
+          'cache-control': 'no-cache',
+          'content-type': 'application/x-www-form-urlencoded',
+          'origin': 'https://widgets.resy.com',
+          'referer': 'https://widgets.resy.com/',
+          'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
+          'sec-ch-ua-mobile': '?0',
+          'sec-ch-ua-platform': '"Windows"',
+          'sec-fetch-dest': 'empty',
+          'sec-fetch-mode': 'cors',
+          'sec-fetch-site': 'same-site',
+          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+          'x-origin': 'https://widgets.resy.com',
+          'x-resy-auth-token': JR_X_ResyAuth,
+          'x-resy-universal-auth': JR_X_ResyAuth
         },
-        formData: {
+        form: {
           'book_token': API_bookToken,
           'struct_payment_method': '{"id":5753141}',
           'source_id': 'resy.com-venue-details'
         },
+        //Commented out when the booking worked with payment with the rest of the form data above
+      // {
+      //   method: 'POST',
+      //   url: `${baseUrl}?`,
+      //   headers: {
+      //     'X-Resy-Auth-Token':JR_X_ResyAuth,
+      //     Authorization: JR_ResyAPI
+      //   },
+      //   formData: {
+      //     'book_token': API_bookToken,
+      //     'struct_payment_method': '{"id":5753141}',
+      //     'source_id': 'resy.com-venue-details'
+      //   },
         rejectUnauthorized: false, // NOT RECOMMENDED - TEMPORARY FOR TESTING
       };
   
+      console.log('Request options:', makeBookOptions);
+
       request(makeBookOptions, function (error, response, body) {
         if (error) {
           reject(error);
@@ -51,7 +80,6 @@ async function makeBooking(API_bookToken,resRGS) {
         } else {
         console.log(resRGS+':Make Booking API call unsuccessful, status code:', response.statusCode);
         console.log("     "+makeBookOptions)
-        //THE PAYMENT ERROR IS A PROBLEM: In the chrome dev console it's -- struct_payment_method: {"id":5753141} and source_id: resy.com-venue-details
         }
 
       });
@@ -64,10 +92,10 @@ var TokenBaseUrl = 'https://api.resy.com/3/details';
 var MakeBaseUrl ='https://api.resy.com/3/book';
 var lat = '40.722653';
 var long = '-73.998739';
-var day = '2023-03-10';
+var day = '2023-03-12';
 var EarliestTime ="17:45:00"
 var LatestTime ="20:00:00"
-let timeArray=["17:45:00","18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00","11:45:00"];
+let timeArray=["17:45:00","18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
 var partySize = '4';
 var venueId='60058';//monkeybar
 var templateId='2057534';
@@ -115,23 +143,23 @@ async function extractBookingTokensAndRgsCodes(jsonFile) {
 // Make multiple bookings with booking codes and rgs codes
 async function makeMultipleBookings(bookingCodesArray) {
   const promises = bookingCodesArray.map(({ bookingToken, rgscodes }) => {
+    console.log(bookingToken+"::"+rgscodes+";");
     return makeBooking(bookingToken, rgscodes);
   });
   return Promise.all(promises);
 }
+
+
+async function main()
+{
+await getBookingTokenArray();
+const bookingTokensAndRgsCodesArray = await extractBookingTokensAndRgsCodes("BookingArray.json");
+await makeMultipleBookings(bookingTokensAndRgsCodesArray);
+}
+
 //--------------------------------------------
 //---------RUN THE JOB-----------------------
 //Cron Job Schedules the tasks
-//ScheduledTask() without the Cron job can be used to check if everything's working before scheduling a job
+
 //--------------------------------------------
-//cron.schedule('0 09 * * 0', scheduledTask);
-
-getBookingTokenArray();
-
-// async function main()
-// {
-// const bookingTokensAndRgsCodesArray = await extractBookingTokensAndRgsCodes("BookingArray.json");
-// await makeMultipleBookings(bookingTokensAndRgsCodesArray);
-// }
-
-// main();
+cron.schedule('0 9 * * 1', main);

@@ -13,7 +13,7 @@ const JR_resy_email = process.env.JR_resy_email;
 
 const fs = require('fs');
 const { authenticate } = require('./Authenticate');
-const { makeVenueFindRequest } = require('./app');
+//const { makeVenueFindRequest } = require('./app');
 
 const cron = require('node-cron');
 

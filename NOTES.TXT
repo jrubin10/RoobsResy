@@ -35,3 +35,79 @@ request(options, function (error, response) {
   if (error) throw new Error(error);
   console.log(response.body);
 });
+
+
+This request also worked (no cookies):
+
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': 'https://api.resy.com/3/book',
+  'headers': {
+    'authority': 'api.resy.com',
+    'accept': 'application/json, text/plain, */*',
+    'accept-language': 'en-US,en;q=0.9',
+    'authorization': 'ResyAPI api_key="VbWk7s3L4KiK5fzlO7JD3Q5EYolJI7n5"',
+    'cache-control': 'no-cache',
+    'content-type': 'application/x-www-form-urlencoded',
+    'origin': 'https://widgets.resy.com',
+    'referer': 'https://widgets.resy.com/',
+    'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+    'x-origin': 'https://widgets.resy.com',
+    'x-resy-auth-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJleHAiOjE2ODEzMjExMjEsInVpZCI6MjM3MDA3LCJndCI6ImNvbnN1bWVyIiwiZ3MiOltdLCJsYW5nIjoiZW4tdXMiLCJleHRyYSI6eyJndWVzdF9pZCI6MTk1Mjg5NH19.AB2ATBOhf6SQj4V560XCw52_8oVokkfQ4kX4zcF9qlwI8XUeRB0ZSUV0q7Ql9054l0IazHO6n-0yww4EXP8ikI-MASXeJ4u9pP3wrzobRCCMkr8LW7LCYdFIiTNQ7oKld6Xdo2Ylfy0wyCwt56PuKZrhXNMOqGx-ygFNDlKjLzCGJPWC',
+    'x-resy-universal-auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJleHAiOjE2ODEzMjExMjEsInVpZCI6MjM3MDA3LCJndCI6ImNvbnN1bWVyIiwiZ3MiOltdLCJsYW5nIjoiZW4tdXMiLCJleHRyYSI6eyJndWVzdF9pZCI6MTk1Mjg5NH19.AB2ATBOhf6SQj4V560XCw52_8oVokkfQ4kX4zcF9qlwI8XUeRB0ZSUV0q7Ql9054l0IazHO6n-0yww4EXP8ikI-MASXeJ4u9pP3wrzobRCCMkr8LW7LCYdFIiTNQ7oKld6Xdo2Ylfy0wyCwt56PuKZrhXNMOqGx-ygFNDlKjLzCGJPWC'
+  },
+  form: {
+    'book_token': 'nIqOEZoreLxYm7HT5O6oLpzMVxk8Z4MFX9zJgaHjzQGeOV9TR|YILD_sOY01bT9BOuWi7ktJW_G0EUXIZ3VEZ1|IUYOlRuHHzdUCFxx0_qnuIP1pm9PoDusX28|0TP4raFCURlpG6_Tmb8zgzm39MUW0IR6|FTncyJ|XCG_WGCbvvFnn3KW4Geft_N4umujDHulw_0aHr5gqRxDT9Adfe0JWIsBoyMwkmpqjBaRzyREpIqY5cnlt6DqSz|Szorz2sVSB9RI5Kp9nsf7vVA4yuZ_JAgxIzRRuIg4P_MfHr62vjrADfxcO3p97dw0aU3cPNND6CEOkuHcpTwyH3Q7BRV9H7hbSbDm97EdBSXOgcYcGXCnYyS5lCL0Ak2haBP37OsFmqVpt|8YPmRqrfMocqTCx0aPLsMr07A|eS3YfLxjrDHl8pI_pYtUFkmVgqCUABFtvVPGZa5FexZrn1POcDei5U6jgr55KJySCJSoEF8ABH98YSSaS|EQ_PlkOGqiCCsSF3ypqHk9thdFpuNmcYqXCxHNGrMGNFlilDimHX7svbtsEDVosaHTHOl|VQgXSKv3SAa_Q5Eo2VRlQKa2EYClmiO|x7j8o|Y|pSlvVxOhxfOJBFCHZ4agq72i_YZKtxZ4gO3pro2XEWXlwkOuX__HO35N2dM6jy92d9Vlm3C3XHJ_ThjU5xb8aHPgAX88bGJmgyehOwEWjresKfHlsIZNUx66b2jsjCqzo_oz00GsYAZhlV0rN7VW07oQDESkYL50u|KkdoaUq096t9nXdKJkxDZ2Z19UTCEXG_CVgVpLZEZMjvdVCNic02pHRvzgN2Gyqvo7MyqFTCX9dPI87H_OV9lCfLxOH9DrlFy0gkAToPDg55Z9SiOHHHv46hw2xwew_6ODNaN5OSPN4_i|ZKJdVzJ0B2sbd1VTNSuFIKXNOV1IXEX94mCATYLzBjnJplvj3QLV9U_ik5axUWBbvo2GzN23hEOYZJX5FMAkXlXfrGOqYUXnuRGnLrrgJxL4nbZsWWHkbM93PktTLfjpAJGB4PlUv3NJ8beiOQNV_y0vZc0wxWFUaYA1OZXWFAQJkOHSp7YVngoaUBz1ib7zWZg==-166567ad960affc535afea9896cbbbe4d677c17ff39c1af62460e6e8',
+    'struct_payment_method': '{"id":5753141}',
+    'source_id': 'resy.com-venue-details'
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
+
+
+
+FAILED - maybe because i had an existing reservation:
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': 'https://api.resy.com/3/book',
+  'headers': {
+    'authority': 'api.resy.com',
+    'accept': 'application/json, text/plain, */*',
+    'accept-language': 'en-US,en;q=0.9',
+    'authorization': 'ResyAPI api_key="VbWk7s3L4KiK5fzlO7JD3Q5EYolJI7n5"',
+    'cache-control': 'no-cache',
+    'content-type': 'application/x-www-form-urlencoded',
+    'origin': 'https://widgets.resy.com',
+    'referer': 'https://widgets.resy.com/',
+    'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-site',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
+    'x-origin': 'https://widgets.resy.com',
+    'x-resy-auth-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJleHAiOjE2ODEzNDY3NjUsInVpZCI6MjM3MDA3LCJndCI6ImNvbnN1bWVyIiwiZ3MiOltdLCJsYW5nIjoiZW4tdXMiLCJleHRyYSI6eyJndWVzdF9pZCI6MTk1Mjg5NH19.AetZ0N_Vv-waetdmf152i0rOVwr8R7du3OgqQBLTHRK54tjfT7h84Izi-EjHNdPSAORfy_7vhciQNh7u4lN3ULnJAIoBs6cdrqfQcg6lgjJdaAHGlcBF6YD2VB-ro7R7-P07J6Dve4bqzzFXX6GOc_8IblQjs12pmnreJlN-wHXggG-6',
+    'x-resy-universal-auth': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJleHAiOjE2ODEzNDY3NjUsInVpZCI6MjM3MDA3LCJndCI6ImNvbnN1bWVyIiwiZ3MiOltdLCJsYW5nIjoiZW4tdXMiLCJleHRyYSI6eyJndWVzdF9pZCI6MTk1Mjg5NH19.AetZ0N_Vv-waetdmf152i0rOVwr8R7du3OgqQBLTHRK54tjfT7h84Izi-EjHNdPSAORfy_7vhciQNh7u4lN3ULnJAIoBs6cdrqfQcg6lgjJdaAHGlcBF6YD2VB-ro7R7-P07J6Dve4bqzzFXX6GOc_8IblQjs12pmnreJlN-wHXggG-6'
+  },
+  form: {
+    'book_token': 'PIxBWvGSKC0f7yDmA5VedBlUsuhqCFLaTyuy6qfZdNDMCz_neZMdw7Yi4ykBhsELU29GtTmdZ42_IsdD1yn0u|3_2lEH9YmdPir1WwRYZ|kG9LvPsE7A224Oo6mAdZoAnZBS5bDHOJmdw07qQPMmOgmmZtNr3mugmKwHFWhUyPy8kfT3LljE72OA4NcEMWUJq6S1gn5xwAubLTf6OlvVlqvxcTd8TATEnN227ug38O93eCYhhI3eT7_YV6FrehzqpN3ON4Jh2Wy8J0HHjXikCjcpabq_jDL4TdDyLVpL|aUb7c56BX5SGS1|6OLYCuBCOnSSyW4MirrHH3DJarGNbHEWHCJGrZ3zO7FH9LJKLtKDilJcmPFdfAYZqr_k2WzUyTdb6uThzJtNzA|z2vzux5qW|oQjopt9ujC|j8vvTqbGDE|sgZ3EzQ8IHtH3Mbl6QyatOEUXl|dOagF4TycNFnx0UAO05AJom3WFq_TMfBqgptwzNnCu44X4qD0evD0R4EyuYPBL7TnQ1HlthoEe_daFJgezdO16V52Ij8iGGy7Yc0ECFsndgjHs|hvPIyBDRN6vuLyilp8|D02wZq1YJ|J50hw7g25cQclRJVZdZqbwTu8QIJza2eZJVgCyp|BUW_wOoIjpeRt6LXYG2ReZoIwknS0|5Pl2GO0taG|Brt86Dgfc1diudyhUuaTUEwQ2O363v5emA2nfkPt5fG1vkXNHlKhtzFd1Qx2rdOWhMGIAN8CCmTHedCxjlry_HQ2OFYytu7RRL3_7N1mhrC7BHLakOHdIeSYPQ5sDOc057hnnNCmDKMfBOvtlS8IRINt|zrdTeLEDgDFruyBFrydoX1hFmMzLRGr06QJvRMr3KSiaqd|n6E83CNuL0ScXqA6zeX1I_5bIYSQ68IUGris7vDYaU3aHs2YvkD6mfjSiDlu5mRp3N8QJLjOk6_0gPujmDk_zP43BoVjqTYoOoWzgLAHDjRy|I4wOxD5GNsmrMahuS6XZPWKKZnuSgmdR7RStSnonkdE21bhyjDPnGA6HuYDmrfvWwP0m1xOVgqhxv0LV8fSAkFiFLx_J3JtzfIhm-a91f8a0efeb31d87f593bd4602bce7d48e523e2b5d1c5fc94f48eb53',
+    'struct_payment_method': '{"id":5753141}',
+    'source_id': 'resy.com-venue-details'
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
