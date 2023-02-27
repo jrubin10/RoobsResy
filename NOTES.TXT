@@ -111,3 +111,16 @@ request(options, function (error, response) {
   if (error) throw new Error(error);
   console.log(response.body);
 });
+
+
+
+Results from Resy:
+
+Reservation booked.		
+Monkey Bar
+	Friday, Mar 10 at 11:45am
+	Party of 5, Dining Room
+MANAGE RESERVATIONS
+CANCEL RESERVATION
+ADD TO CALENDAR
+Google		Apple		Outlook
