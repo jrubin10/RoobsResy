@@ -92,7 +92,7 @@ var TokenBaseUrl = 'https://api.resy.com/3/details';
 var MakeBaseUrl ='https://api.resy.com/3/book';
 var lat = '40.722653';
 var long = '-73.998739';
-var day = '2023-03-12';
+var day = '2023-03-13';
 var EarliestTime ="17:45:00"
 var LatestTime ="20:00:00"
 let timeArray=["17:45:00","18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
@@ -162,4 +162,4 @@ await makeMultipleBookings(bookingTokensAndRgsCodesArray);
 //Cron Job Schedules the tasks
 
 //--------------------------------------------
-cron.schedule('0 9 * * 1', main);
+cron.schedule('0 9 * * *', main);

@@ -1,0 +1,1794 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1677972278.json", 
+	"title": "Root", 
+	"type": "object",
+	"properties": {
+		"query": {
+			"$id": "#root/query", 
+			"title": "Query", 
+			"type": "object",
+			"properties": {
+				"day": {
+					"$id": "#root/query/day", 
+					"title": "Day", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"2023-02-28"
+					],
+					"pattern": "^.*$"
+				},
+				"party_size": {
+					"$id": "#root/query/party_size", 
+					"title": "Party_size", 
+					"type": "integer",
+					"examples": [
+						2
+					],
+					"default": 0
+				}
+			}
+		}
+,
+		"bookmark": {
+			"$id": "#root/bookmark", 
+			"title": "Bookmark", 
+			"type": "null",
+			"default": null
+		},
+		"results": {
+			"$id": "#root/results", 
+			"title": "Results", 
+			"type": "object",
+			"properties": {
+				"venues": {
+					"$id": "#root/results/venues", 
+					"title": "Venues", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/results/venues/items", 
+						"title": "Items", 
+						"type": "object",
+						"properties": {
+							"venue": {
+								"$id": "#root/results/venues/items/venue", 
+								"title": "Venue", 
+								"type": "object",
+								"properties": {
+									"id": {
+										"$id": "#root/results/venues/items/venue/id", 
+										"title": "Id", 
+										"type": "object",
+										"properties": {
+											"resy": {
+												"$id": "#root/results/venues/items/venue/id/resy", 
+												"title": "Resy", 
+												"type": "integer",
+												"examples": [
+													60058
+												],
+												"default": 0
+											}
+										}
+									}
+,
+									"venue_group": {
+										"$id": "#root/results/venues/items/venue/venue_group", 
+										"title": "Venue_group", 
+										"type": "object",
+										"properties": {
+											"id": {
+												"$id": "#root/results/venues/items/venue/venue_group/id", 
+												"title": "Id", 
+												"type": "integer",
+												"examples": [
+													624
+												],
+												"default": 0
+											},
+											"name": {
+												"$id": "#root/results/venues/items/venue/venue_group/name", 
+												"title": "Name", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"Hogsalt Admin Group"
+												],
+												"pattern": "^.*$"
+											},
+											"venues": {
+												"$id": "#root/results/venues/items/venue/venue_group/venues", 
+												"title": "Venues", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/results/venues/items/venue/venue_group/venues/items", 
+													"title": "Items", 
+													"type": "integer",
+													"examples": [
+														834
+													],
+													"default": 0
+												}
+											}
+										}
+									}
+,
+									"name": {
+										"$id": "#root/results/venues/items/venue/name", 
+										"title": "Name", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"Monkey Bar"
+										],
+										"pattern": "^.*$"
+									},
+									"type": {
+										"$id": "#root/results/venues/items/venue/type", 
+										"title": "Type", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"American"
+										],
+										"pattern": "^.*$"
+									},
+									"url_slug": {
+										"$id": "#root/results/venues/items/venue/url_slug", 
+										"title": "Url_slug", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"monkey-bar-nyc"
+										],
+										"pattern": "^.*$"
+									},
+									"price_range": {
+										"$id": "#root/results/venues/items/venue/price_range", 
+										"title": "Price_range", 
+										"type": "integer",
+										"examples": [
+											3
+										],
+										"default": 0
+									},
+									"average_bill_size": {
+										"$id": "#root/results/venues/items/venue/average_bill_size", 
+										"title": "Average_bill_size", 
+										"type": "integer",
+										"examples": [
+											1
+										],
+										"default": 0
+									},
+									"currency_symbol": {
+										"$id": "#root/results/venues/items/venue/currency_symbol", 
+										"title": "Currency_symbol", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"$"
+										],
+										"pattern": "^.*$"
+									},
+									"hospitality_included": {
+										"$id": "#root/results/venues/items/venue/hospitality_included", 
+										"title": "Hospitality_included", 
+										"type": "integer",
+										"examples": [
+											0
+										],
+										"default": 0
+									},
+									"resy_select": {
+										"$id": "#root/results/venues/items/venue/resy_select", 
+										"title": "Resy_select", 
+										"type": "integer",
+										"examples": [
+											0
+										],
+										"default": 0
+									},
+									"is_gdc": {
+										"$id": "#root/results/venues/items/venue/is_gdc", 
+										"title": "Is_gdc", 
+										"type": "integer",
+										"examples": [
+											0
+										],
+										"default": 0
+									},
+									"is_global_dining_access": {
+										"$id": "#root/results/venues/items/venue/is_global_dining_access", 
+										"title": "Is_global_dining_access", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"is_global_dining_access_only": {
+										"$id": "#root/results/venues/items/venue/is_global_dining_access_only", 
+										"title": "Is_global_dining_access_only", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"requires_reservation_transfers": {
+										"$id": "#root/results/venues/items/venue/requires_reservation_transfers", 
+										"title": "Requires_reservation_transfers", 
+										"type": "integer",
+										"examples": [
+											0
+										],
+										"default": 0
+									},
+									"is_gns": {
+										"$id": "#root/results/venues/items/venue/is_gns", 
+										"title": "Is_gns", 
+										"type": "integer",
+										"examples": [
+											0
+										],
+										"default": 0
+									},
+									"transaction_processor": {
+										"$id": "#root/results/venues/items/venue/transaction_processor", 
+										"title": "Transaction_processor", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"stripe"
+										],
+										"pattern": "^.*$"
+									},
+									"hide_allergy_question": {
+										"$id": "#root/results/venues/items/venue/hide_allergy_question", 
+										"title": "Hide_allergy_question", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"hide_occasion_question": {
+										"$id": "#root/results/venues/items/venue/hide_occasion_question", 
+										"title": "Hide_occasion_question", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"hide_special_request_question": {
+										"$id": "#root/results/venues/items/venue/hide_special_request_question", 
+										"title": "Hide_special_request_question", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"gda_concierge_booking": {
+										"$id": "#root/results/venues/items/venue/gda_concierge_booking", 
+										"title": "Gda_concierge_booking", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"tax_included": {
+										"$id": "#root/results/venues/items/venue/tax_included", 
+										"title": "Tax_included", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"rating": {
+										"$id": "#root/results/venues/items/venue/rating", 
+										"title": "Rating", 
+										"type": "number",
+										"examples": [
+											4.75977
+										],
+										"default": 0.0
+									},
+									"total_ratings": {
+										"$id": "#root/results/venues/items/venue/total_ratings", 
+										"title": "Total_ratings", 
+										"type": "integer",
+										"examples": [
+											2252
+										],
+										"default": 0
+									},
+									"inventory": {
+										"$id": "#root/results/venues/items/venue/inventory", 
+										"title": "Inventory", 
+										"type": "object",
+										"properties": {
+											"type": {
+												"$id": "#root/results/venues/items/venue/inventory/type", 
+												"title": "Type", 
+												"type": "object",
+												"properties": {
+													"id": {
+														"$id": "#root/results/venues/items/venue/inventory/type/id", 
+														"title": "Id", 
+														"type": "integer",
+														"examples": [
+															2
+														],
+														"default": 0
+													}
+												}
+											}
+
+										}
+									}
+,
+									"reopen": {
+										"$id": "#root/results/venues/items/venue/reopen", 
+										"title": "Reopen", 
+										"type": "object",
+										"properties": {
+											"date": {
+												"$id": "#root/results/venues/items/venue/reopen/date", 
+												"title": "Date", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"2022-09-07"
+												],
+												"pattern": "^.*$"
+											}
+										}
+									}
+,
+									"location": {
+										"$id": "#root/results/venues/items/venue/location", 
+										"title": "Location", 
+										"type": "object",
+										"properties": {
+											"time_zone": {
+												"$id": "#root/results/venues/items/venue/location/time_zone", 
+												"title": "Time_zone", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"EST5EDT"
+												],
+												"pattern": "^.*$"
+											},
+											"neighborhood": {
+												"$id": "#root/results/venues/items/venue/location/neighborhood", 
+												"title": "Neighborhood", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"Midtown East"
+												],
+												"pattern": "^.*$"
+											},
+											"geo": {
+												"$id": "#root/results/venues/items/venue/location/geo", 
+												"title": "Geo", 
+												"type": "object",
+												"properties": {
+													"lat": {
+														"$id": "#root/results/venues/items/venue/location/geo/lat", 
+														"title": "Lat", 
+														"type": "number",
+														"examples": [
+															40.7606946001054
+														],
+														"default": 0.0
+													},
+													"lon": {
+														"$id": "#root/results/venues/items/venue/location/geo/lon", 
+														"title": "Lon", 
+														"type": "number",
+														"examples": [
+															-73.9732475153439
+														],
+														"default": 0.0
+													}
+												}
+											}
+,
+											"code": {
+												"$id": "#root/results/venues/items/venue/location/code", 
+												"title": "Code", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"ny"
+												],
+												"pattern": "^.*$"
+											},
+											"name": {
+												"$id": "#root/results/venues/items/venue/location/name", 
+												"title": "Name", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"New York"
+												],
+												"pattern": "^.*$"
+											}
+										}
+									}
+,
+									"travel_time": {
+										"$id": "#root/results/venues/items/venue/travel_time", 
+										"title": "Travel_time", 
+										"type": "object",
+										"properties": {
+											"distance": {
+												"$id": "#root/results/venues/items/venue/travel_time/distance", 
+												"title": "Distance", 
+												"type": "number",
+												"examples": [
+													2.950935284319231
+												],
+												"default": 0.0
+											}
+										}
+									}
+,
+									"source": {
+										"$id": "#root/results/venues/items/venue/source", 
+										"title": "Source", 
+										"type": "object",
+										"properties": {
+											"name": {
+												"$id": "#root/results/venues/items/venue/source/name", 
+												"title": "Name", 
+												"type": "null",
+												"default": null
+											},
+											"logo": {
+												"$id": "#root/results/venues/items/venue/source/logo", 
+												"title": "Logo", 
+												"type": "null",
+												"default": null
+											},
+											"terms_of_service": {
+												"$id": "#root/results/venues/items/venue/source/terms_of_service", 
+												"title": "Terms_of_service", 
+												"type": "null",
+												"default": null
+											},
+											"privacy_policy": {
+												"$id": "#root/results/venues/items/venue/source/privacy_policy", 
+												"title": "Privacy_policy", 
+												"type": "null",
+												"default": null
+											}
+										}
+									}
+,
+									"service_types": {
+										"$id": "#root/results/venues/items/venue/service_types", 
+										"title": "Service_types", 
+										"type": "object",
+										"properties": {
+										}
+									}
+,
+									"top": {
+										"$id": "#root/results/venues/items/venue/top", 
+										"title": "Top", 
+										"type": "boolean",
+										"examples": [
+											true
+										],
+										"default": true
+									},
+									"ticket": {
+										"$id": "#root/results/venues/items/venue/ticket", 
+										"title": "Ticket", 
+										"type": "object",
+										"properties": {
+											"average": {
+												"$id": "#root/results/venues/items/venue/ticket/average", 
+												"title": "Average", 
+												"type": "integer",
+												"examples": [
+													1
+												],
+												"default": 0
+											},
+											"average_str": {
+												"$id": "#root/results/venues/items/venue/ticket/average_str", 
+												"title": "Average_str", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"$1"
+												],
+												"pattern": "^.*$"
+											}
+										}
+									}
+,
+									"currency": {
+										"$id": "#root/results/venues/items/venue/currency", 
+										"title": "Currency", 
+										"type": "object",
+										"properties": {
+											"symbol": {
+												"$id": "#root/results/venues/items/venue/currency/symbol", 
+												"title": "Symbol", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"$"
+												],
+												"pattern": "^.*$"
+											},
+											"code": {
+												"$id": "#root/results/venues/items/venue/currency/code", 
+												"title": "Code", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"USD"
+												],
+												"pattern": "^.*$"
+											}
+										}
+									}
+,
+									"is_rga": {
+										"$id": "#root/results/venues/items/venue/is_rga", 
+										"title": "Is_rga", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"is_rga_only": {
+										"$id": "#root/results/venues/items/venue/is_rga_only", 
+										"title": "Is_rga_only", 
+										"type": "boolean",
+										"examples": [
+											false
+										],
+										"default": true
+									},
+									"default_template": {
+										"$id": "#root/results/venues/items/venue/default_template", 
+										"title": "Default_template", 
+										"type": "string",
+										"default": "",
+										"examples": [
+											"1789463"
+										],
+										"pattern": "^.*$"
+									},
+									"responsive_images": {
+										"$id": "#root/results/venues/items/venue/responsive_images", 
+										"title": "Responsive_images", 
+										"type": "object",
+										"properties": {
+											"originals": {
+												"$id": "#root/results/venues/items/venue/responsive_images/originals", 
+												"title": "Originals", 
+												"type": "object",
+												"properties": {
+													"085d799df3d964ad008ae129e0f9e4b34f059baa": {
+														"$id": "#root/results/venues/items/venue/responsive_images/originals/085d799df3d964ad008ae129e0f9e4b34f059baa", 
+														"title": "085d799df3d964ad008ae129e0f9e4b34f059baa", 
+														"type": "object",
+														"properties": {
+															"url": {
+																"$id": "#root/results/venues/items/venue/responsive_images/originals/085d799df3d964ad008ae129e0f9e4b34f059baa/url", 
+																"title": "Url", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg"
+																],
+																"pattern": "^.*$"
+															}
+														}
+													}
+
+												}
+											}
+,
+											"urls": {
+												"$id": "#root/results/venues/items/venue/responsive_images/urls", 
+												"title": "Urls", 
+												"type": "object",
+												"properties": {
+													"085d799df3d964ad008ae129e0f9e4b34f059baa": {
+														"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa", 
+														"title": "085d799df3d964ad008ae129e0f9e4b34f059baa", 
+														"type": "object",
+														"properties": {
+															"1:1": {
+																"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/1:1", 
+																"title": "1:1", 
+																"type": "object",
+																"properties": {
+																	"200": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/1:1/200", 
+																		"title": "200", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/1:1/200"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"400": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/1:1/400", 
+																		"title": "400", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/1:1/400"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"800": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/1:1/800", 
+																		"title": "800", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/1:1/800"
+																		],
+																		"pattern": "^.*$"
+																	}
+																}
+															}
+,
+															"4:3": {
+																"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/4:3", 
+																"title": "4:3", 
+																"type": "object",
+																"properties": {
+																	"400": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/4:3/400", 
+																		"title": "400", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/4:3/400"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"800": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/4:3/800", 
+																		"title": "800", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/4:3/800"
+																		],
+																		"pattern": "^.*$"
+																	}
+																}
+															}
+,
+															"16:9": {
+																"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/16:9", 
+																"title": "16:9", 
+																"type": "object",
+																"properties": {
+																	"400": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/16:9/400", 
+																		"title": "400", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/16:9/400"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"800": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls/085d799df3d964ad008ae129e0f9e4b34f059baa/16:9/800", 
+																		"title": "800", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/16:9/800"
+																		],
+																		"pattern": "^.*$"
+																	}
+																}
+															}
+
+														}
+													}
+
+												}
+											}
+,
+											"urls_by_resolution": {
+												"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution", 
+												"title": "Urls_by_resolution", 
+												"type": "object",
+												"properties": {
+													"085d799df3d964ad008ae129e0f9e4b34f059baa": {
+														"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa", 
+														"title": "085d799df3d964ad008ae129e0f9e4b34f059baa", 
+														"type": "object",
+														"properties": {
+															"200": {
+																"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/200", 
+																"title": "200", 
+																"type": "object",
+																"properties": {
+																	"1:1": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/200/1:1", 
+																		"title": "1:1", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/1:1/200"
+																		],
+																		"pattern": "^.*$"
+																	}
+																}
+															}
+,
+															"400": {
+																"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/400", 
+																"title": "400", 
+																"type": "object",
+																"properties": {
+																	"1:1": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/400/1:1", 
+																		"title": "1:1", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/1:1/400"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"4:3": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/400/4:3", 
+																		"title": "4:3", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/4:3/400"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"16:9": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/400/16:9", 
+																		"title": "16:9", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/16:9/400"
+																		],
+																		"pattern": "^.*$"
+																	}
+																}
+															}
+,
+															"800": {
+																"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/800", 
+																"title": "800", 
+																"type": "object",
+																"properties": {
+																	"1:1": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/800/1:1", 
+																		"title": "1:1", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/1:1/800"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"4:3": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/800/4:3", 
+																		"title": "4:3", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/4:3/800"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"16:9": {
+																		"$id": "#root/results/venues/items/venue/responsive_images/urls_by_resolution/085d799df3d964ad008ae129e0f9e4b34f059baa/800/16:9", 
+																		"title": "16:9", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/16:9/800"
+																		],
+																		"pattern": "^.*$"
+																	}
+																}
+															}
+
+														}
+													}
+
+												}
+											}
+,
+											"file_names": {
+												"$id": "#root/results/venues/items/venue/responsive_images/file_names", 
+												"title": "File_names", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/results/venues/items/venue/responsive_images/file_names/items", 
+													"title": "Items", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"085d799df3d964ad008ae129e0f9e4b34f059baa"
+													],
+													"pattern": "^.*$"
+												}
+											},
+											"aspect_ratios": {
+												"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios", 
+												"title": "Aspect_ratios", 
+												"type": "object",
+												"properties": {
+													"1:1": {
+														"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/1:1", 
+														"title": "1:1", 
+														"type": "object",
+														"properties": {
+															"200": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/1:1/200", 
+																"title": "200", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"200x200"
+																],
+																"pattern": "^.*$"
+															},
+															"400": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/1:1/400", 
+																"title": "400", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"400x400"
+																],
+																"pattern": "^.*$"
+															},
+															"800": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/1:1/800", 
+																"title": "800", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"800x800"
+																],
+																"pattern": "^.*$"
+															},
+															"1600": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/1:1/1600", 
+																"title": "1600", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"1600x1600"
+																],
+																"pattern": "^.*$"
+															}
+														}
+													}
+,
+													"4:3": {
+														"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/4:3", 
+														"title": "4:3", 
+														"type": "object",
+														"properties": {
+															"400": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/4:3/400", 
+																"title": "400", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"400x300"
+																],
+																"pattern": "^.*$"
+															},
+															"800": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/4:3/800", 
+																"title": "800", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"800x600"
+																],
+																"pattern": "^.*$"
+															},
+															"1600": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/4:3/1600", 
+																"title": "1600", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"1600x1200"
+																],
+																"pattern": "^.*$"
+															}
+														}
+													}
+,
+													"16:9": {
+														"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/16:9", 
+														"title": "16:9", 
+														"type": "object",
+														"properties": {
+															"400": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/16:9/400", 
+																"title": "400", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"400x225"
+																],
+																"pattern": "^.*$"
+															},
+															"800": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/16:9/800", 
+																"title": "800", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"800x450"
+																],
+																"pattern": "^.*$"
+															},
+															"1600": {
+																"$id": "#root/results/venues/items/venue/responsive_images/aspect_ratios/16:9/1600", 
+																"title": "1600", 
+																"type": "string",
+																"default": "",
+																"examples": [
+																	"1600x900"
+																],
+																"pattern": "^.*$"
+															}
+														}
+													}
+
+												}
+											}
+
+										}
+									}
+,
+									"notify_options": {
+										"$id": "#root/results/venues/items/venue/notify_options", 
+										"title": "Notify_options", 
+										"type": "array",
+										"default": []
+									},
+									"favorite": {
+										"$id": "#root/results/venues/items/venue/favorite", 
+										"title": "Favorite", 
+										"type": "null",
+										"default": null
+									},
+									"waitlist": {
+										"$id": "#root/results/venues/items/venue/waitlist", 
+										"title": "Waitlist", 
+										"type": "object",
+										"properties": {
+											"available": {
+												"$id": "#root/results/venues/items/venue/waitlist/available", 
+												"title": "Available", 
+												"type": "integer",
+												"examples": [
+													0
+												],
+												"default": 0
+											},
+											"label": {
+												"$id": "#root/results/venues/items/venue/waitlist/label", 
+												"title": "Label", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"Join Wait List"
+												],
+												"pattern": "^.*$"
+											},
+											"current": {
+												"$id": "#root/results/venues/items/venue/waitlist/current", 
+												"title": "Current", 
+												"type": "null",
+												"default": null
+											}
+										}
+									}
+,
+									"supports_pickups": {
+										"$id": "#root/results/venues/items/venue/supports_pickups", 
+										"title": "Supports_pickups", 
+										"type": "integer",
+										"examples": [
+											0
+										],
+										"default": 0
+									},
+									"collections": {
+										"$id": "#root/results/venues/items/venue/collections", 
+										"title": "Collections", 
+										"type": "array",
+										"default": [],
+										"items":{
+											"$id": "#root/results/venues/items/venue/collections/items", 
+											"title": "Items", 
+											"type": "object",
+											"properties": {
+												"id": {
+													"$id": "#root/results/venues/items/venue/collections/items/id", 
+													"title": "Id", 
+													"type": "integer",
+													"examples": [
+														883
+													],
+													"default": 0
+												},
+												"type_id": {
+													"$id": "#root/results/venues/items/venue/collections/items/type_id", 
+													"title": "Type_id", 
+													"type": "integer",
+													"examples": [
+														1
+													],
+													"default": 0
+												},
+												"file_name": {
+													"$id": "#root/results/venues/items/venue/collections/items/file_name", 
+													"title": "File_name", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"winter"
+													],
+													"pattern": "^.*$"
+												},
+												"image": {
+													"$id": "#root/results/venues/items/venue/collections/items/image", 
+													"title": "Image", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"https://s3.amazonaws.com/resy.com/images/lists/winter.svg"
+													],
+													"pattern": "^.*$"
+												},
+												"name": {
+													"$id": "#root/results/venues/items/venue/collections/items/name", 
+													"title": "Name", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"New York’s Essential Cozy Locales"
+													],
+													"pattern": "^.*$"
+												},
+												"short_name": {
+													"$id": "#root/results/venues/items/venue/collections/items/short_name", 
+													"title": "Short_name", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"Cozy Locales"
+													],
+													"pattern": "^.*$"
+												},
+												"description": {
+													"$id": "#root/results/venues/items/venue/collections/items/description", 
+													"title": "Description", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"Your new favorite après-ski (sans the ski) locales — fireplace, snug corners, and heart-warming fare included."
+													],
+													"pattern": "^.*$"
+												}
+											}
+										}
+
+									},
+									"content": {
+										"$id": "#root/results/venues/items/venue/content", 
+										"title": "Content", 
+										"type": "array",
+										"default": [],
+										"items":{
+											"$id": "#root/results/venues/items/venue/content/items", 
+											"title": "Items", 
+											"type": "object",
+											"properties": {
+												"attribution": {
+													"$id": "#root/results/venues/items/venue/content/items/attribution", 
+													"title": "Attribution", 
+													"type": "null",
+													"default": null
+												},
+												"body": {
+													"$id": "#root/results/venues/items/venue/content/items/body", 
+													"title": "Body", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"As a New York institution that opened in 1936, the Monkey Bar has had its share of the city’s glitz and lore. The red vinyl booths and monkey murals of this swanky Midtown spot have seen everyone from Frank Sinatra to Isadora Duncan, and with the group behind Au Cheval now in charge, you can expect an extravagant menu of steaks, handmade pastas, and classic cocktails executed to the nines."
+													],
+													"pattern": "^.*$"
+												},
+												"display": {
+													"$id": "#root/results/venues/items/venue/content/items/display", 
+													"title": "Display", 
+													"type": "object",
+													"properties": {
+														"type": {
+															"$id": "#root/results/venues/items/venue/content/items/display/type", 
+															"title": "Type", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"text"
+															],
+															"pattern": "^.*$"
+														}
+													}
+												}
+,
+												"icon": {
+													"$id": "#root/results/venues/items/venue/content/items/icon", 
+													"title": "Icon", 
+													"type": "object",
+													"properties": {
+														"url": {
+															"$id": "#root/results/venues/items/venue/content/items/icon/url", 
+															"title": "Url", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"https://s3.amazonaws.com/resy.com/images/icons/heart.svg"
+															],
+															"pattern": "^.*$"
+														}
+													}
+												}
+,
+												"locale": {
+													"$id": "#root/results/venues/items/venue/content/items/locale", 
+													"title": "Locale", 
+													"type": "object",
+													"properties": {
+														"language": {
+															"$id": "#root/results/venues/items/venue/content/items/locale/language", 
+															"title": "Language", 
+															"type": "string",
+															"default": "",
+															"examples": [
+																"en-us"
+															],
+															"pattern": "^.*$"
+														}
+													}
+												}
+,
+												"name": {
+													"$id": "#root/results/venues/items/venue/content/items/name", 
+													"title": "Name", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"why_we_like_it"
+													],
+													"pattern": "^.*$"
+												},
+												"title": {
+													"$id": "#root/results/venues/items/venue/content/items/title", 
+													"title": "Title", 
+													"type": "null",
+													"default": null
+												}
+											}
+										}
+
+									},
+									"allow_bypass_payment_method": {
+										"$id": "#root/results/venues/items/venue/allow_bypass_payment_method", 
+										"title": "Allow_bypass_payment_method", 
+										"type": "integer",
+										"examples": [
+											1
+										],
+										"default": 0
+									},
+									"events": {
+										"$id": "#root/results/venues/items/venue/events", 
+										"title": "Events", 
+										"type": "array",
+										"default": []
+									}
+								}
+							}
+,
+							"templates": {
+								"$id": "#root/results/venues/items/templates", 
+								"title": "Templates", 
+								"type": "object",
+								"properties": {
+									"1789463": {
+										"$id": "#root/results/venues/items/templates/1789463", 
+										"title": "1789463", 
+										"type": "object",
+										"properties": {
+											"is_paid": {
+												"$id": "#root/results/venues/items/templates/1789463/is_paid", 
+												"title": "Is_paid", 
+												"type": "boolean",
+												"examples": [
+													false
+												],
+												"default": true
+											},
+											"venue_share": {
+												"$id": "#root/results/venues/items/templates/1789463/venue_share", 
+												"title": "Venue_share", 
+												"type": "null",
+												"default": null
+											},
+											"restriction_id": {
+												"$id": "#root/results/venues/items/templates/1789463/restriction_id", 
+												"title": "Restriction_id", 
+												"type": "null",
+												"default": null
+											},
+											"payment_structure": {
+												"$id": "#root/results/venues/items/templates/1789463/payment_structure", 
+												"title": "Payment_structure", 
+												"type": "null",
+												"default": null
+											},
+											"cancellation_fee": {
+												"$id": "#root/results/venues/items/templates/1789463/cancellation_fee", 
+												"title": "Cancellation_fee", 
+												"type": "null",
+												"default": null
+											},
+											"secs_cancel_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/secs_cancel_cut_off", 
+												"title": "Secs_cancel_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"time_cancel_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/time_cancel_cut_off", 
+												"title": "Time_cancel_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"secs_change_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/secs_change_cut_off", 
+												"title": "Secs_change_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"time_change_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/time_change_cut_off", 
+												"title": "Time_change_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"large_party_size_cancel": {
+												"$id": "#root/results/venues/items/templates/1789463/large_party_size_cancel", 
+												"title": "Large_party_size_cancel", 
+												"type": "null",
+												"default": null
+											},
+											"large_party_cancellation_fee": {
+												"$id": "#root/results/venues/items/templates/1789463/large_party_cancellation_fee", 
+												"title": "Large_party_cancellation_fee", 
+												"type": "null",
+												"default": null
+											},
+											"large_party_secs_cancel_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/large_party_secs_cancel_cut_off", 
+												"title": "Large_party_secs_cancel_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"large_party_time_cancel_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/large_party_time_cancel_cut_off", 
+												"title": "Large_party_time_cancel_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"large_party_secs_change_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/large_party_secs_change_cut_off", 
+												"title": "Large_party_secs_change_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"large_party_time_change_cut_off": {
+												"$id": "#root/results/venues/items/templates/1789463/large_party_time_change_cut_off", 
+												"title": "Large_party_time_change_cut_off", 
+												"type": "null",
+												"default": null
+											},
+											"deposit_fee": {
+												"$id": "#root/results/venues/items/templates/1789463/deposit_fee", 
+												"title": "Deposit_fee", 
+												"type": "null",
+												"default": null
+											},
+											"service_charge": {
+												"$id": "#root/results/venues/items/templates/1789463/service_charge", 
+												"title": "Service_charge", 
+												"type": "null",
+												"default": null
+											},
+											"service_charge_options": {
+												"$id": "#root/results/venues/items/templates/1789463/service_charge_options", 
+												"title": "Service_charge_options", 
+												"type": "array",
+												"default": []
+											},
+											"images": {
+												"$id": "#root/results/venues/items/templates/1789463/images", 
+												"title": "Images", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/results/venues/items/templates/1789463/images/items", 
+													"title": "Items", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"https://image.resy.com/3/003/2/60058/085d799df3d964ad008ae129e0f9e4b34f059baa/jpg/640x360"
+													],
+													"pattern": "^.*$"
+												}
+											},
+											"raw_image_names": {
+												"$id": "#root/results/venues/items/templates/1789463/raw_image_names", 
+												"title": "Raw_image_names", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/results/venues/items/templates/1789463/raw_image_names/items", 
+													"title": "Items", 
+													"type": "string",
+													"default": "",
+													"examples": [
+														"085d799df3d964ad008ae129e0f9e4b34f059baa"
+													],
+													"pattern": "^.*$"
+												}
+											},
+											"image_dimensions": {
+												"$id": "#root/results/venues/items/templates/1789463/image_dimensions", 
+												"title": "Image_dimensions", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/results/venues/items/templates/1789463/image_dimensions/items", 
+													"title": "Items", 
+													"type": "array",
+													"default": [],
+													"items":{
+														"$id": "#root/results/venues/items/templates/1789463/image_dimensions/items/items", 
+														"title": "Items", 
+														"type": "integer",
+														"examples": [
+															1250
+														],
+														"default": 0
+													}
+												}
+											},
+											"is_default": {
+												"$id": "#root/results/venues/items/templates/1789463/is_default", 
+												"title": "Is_default", 
+												"type": "integer",
+												"examples": [
+													1
+												],
+												"default": 0
+											},
+											"is_event": {
+												"$id": "#root/results/venues/items/templates/1789463/is_event", 
+												"title": "Is_event", 
+												"type": "integer",
+												"examples": [
+													0
+												],
+												"default": 0
+											},
+											"is_pickup": {
+												"$id": "#root/results/venues/items/templates/1789463/is_pickup", 
+												"title": "Is_pickup", 
+												"type": "integer",
+												"examples": [
+													0
+												],
+												"default": 0
+											},
+											"pickup_highlight": {
+												"$id": "#root/results/venues/items/templates/1789463/pickup_highlight", 
+												"title": "Pickup_highlight", 
+												"type": "integer",
+												"examples": [
+													0
+												],
+												"default": 0
+											},
+											"venue_id": {
+												"$id": "#root/results/venues/items/templates/1789463/venue_id", 
+												"title": "Venue_id", 
+												"type": "integer",
+												"examples": [
+													60058
+												],
+												"default": 0
+											},
+											"reservation_config": {
+												"$id": "#root/results/venues/items/templates/1789463/reservation_config", 
+												"title": "Reservation_config", 
+												"type": "object",
+												"properties": {
+													"badge": {
+														"$id": "#root/results/venues/items/templates/1789463/reservation_config/badge", 
+														"title": "Badge", 
+														"type": "null",
+														"default": null
+													},
+													"type": {
+														"$id": "#root/results/venues/items/templates/1789463/reservation_config/type", 
+														"title": "Type", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															""
+														],
+														"pattern": "^.*$"
+													},
+													"secs_off_market": {
+														"$id": "#root/results/venues/items/templates/1789463/reservation_config/secs_off_market", 
+														"title": "Secs_off_market", 
+														"type": "null",
+														"default": null
+													},
+													"time_off_market": {
+														"$id": "#root/results/venues/items/templates/1789463/reservation_config/time_off_market", 
+														"title": "Time_off_market", 
+														"type": "null",
+														"default": null
+													}
+												}
+											}
+,
+											"turn_times": {
+												"$id": "#root/results/venues/items/templates/1789463/turn_times", 
+												"title": "Turn_times", 
+												"type": "array",
+												"default": [],
+												"items":{
+													"$id": "#root/results/venues/items/templates/1789463/turn_times/items", 
+													"title": "Items", 
+													"type": "object",
+													"properties": {
+														"secs_amount": {
+															"$id": "#root/results/venues/items/templates/1789463/turn_times/items/secs_amount", 
+															"title": "Secs_amount", 
+															"type": "integer",
+															"examples": [
+																5400
+															],
+															"default": 0
+														},
+														"size": {
+															"$id": "#root/results/venues/items/templates/1789463/turn_times/items/size", 
+															"title": "Size", 
+															"type": "object",
+															"properties": {
+																"max": {
+																	"$id": "#root/results/venues/items/templates/1789463/turn_times/items/size/max", 
+																	"title": "Max", 
+																	"type": "integer",
+																	"examples": [
+																		1
+																	],
+																	"default": 0
+																},
+																"min": {
+																	"$id": "#root/results/venues/items/templates/1789463/turn_times/items/size/min", 
+																	"title": "Min", 
+																	"type": "integer",
+																	"examples": [
+																		1
+																	],
+																	"default": 0
+																}
+															}
+														}
+
+													}
+												}
+
+											},
+											"display_config": {
+												"$id": "#root/results/venues/items/templates/1789463/display_config", 
+												"title": "Display_config", 
+												"type": "object",
+												"properties": {
+													"color": {
+														"$id": "#root/results/venues/items/templates/1789463/display_config/color", 
+														"title": "Color", 
+														"type": "object",
+														"properties": {
+															"background": {
+																"$id": "#root/results/venues/items/templates/1789463/display_config/color/background", 
+																"title": "Background", 
+																"type": "null",
+																"default": null
+															},
+															"font": {
+																"$id": "#root/results/venues/items/templates/1789463/display_config/color/font", 
+																"title": "Font", 
+																"type": "null",
+																"default": null
+															}
+														}
+													}
+
+												}
+											}
+,
+											"content": {
+												"$id": "#root/results/venues/items/templates/1789463/content", 
+												"title": "Content", 
+												"type": "object",
+												"properties": {
+													"en-us": {
+														"$id": "#root/results/venues/items/templates/1789463/content/en-us", 
+														"title": "En-us", 
+														"type": "object",
+														"properties": {
+															"about": {
+																"$id": "#root/results/venues/items/templates/1789463/content/en-us/about", 
+																"title": "About", 
+																"type": "object",
+																"properties": {
+																	"attribution": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/about/attribution", 
+																		"title": "Attribution", 
+																		"type": "null",
+																		"default": null
+																	},
+																	"body": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/about/body", 
+																		"title": "Body", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"Born in 1936, the heartbeat of Midtown dining with its timeless fare and iconic vibe.\n"
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"title": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/about/title", 
+																		"title": "Title", 
+																		"type": "null",
+																		"default": null
+																	}
+																}
+															}
+,
+															"need_to_know": {
+																"$id": "#root/results/venues/items/templates/1789463/content/en-us/need_to_know", 
+																"title": "Need_to_know", 
+																"type": "object",
+																"properties": {
+																	"attribution": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/need_to_know/attribution", 
+																		"title": "Attribution", 
+																		"type": "null",
+																		"default": null
+																	},
+																	"body": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/need_to_know/body", 
+																		"title": "Body", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"Monkey Bar accepts reservations up to 14 days in advance with each new day becoming available at 9 AM ET. Reservations are available for parties of 1-8 guests. We kindly ask that you do not make multiple reservations for more than one group. \n\nSeating for walk-in guests is available in the bar area. \n\nA $2.50 per person reservation fee will be added to all reservations made online. This is to secure your seats with us. Holiday fees may vary. We do not charge a reservation fee for walk-in guests.   \n\nReservations are not transferable and we are not obligated to honor transferred reservations."
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"title": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/need_to_know/title", 
+																		"title": "Title", 
+																		"type": "null",
+																		"default": null
+																	}
+																}
+															}
+,
+															"why_we_like_it": {
+																"$id": "#root/results/venues/items/templates/1789463/content/en-us/why_we_like_it", 
+																"title": "Why_we_like_it", 
+																"type": "object",
+																"properties": {
+																	"attribution": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/why_we_like_it/attribution", 
+																		"title": "Attribution", 
+																		"type": "null",
+																		"default": null
+																	},
+																	"body": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/why_we_like_it/body", 
+																		"title": "Body", 
+																		"type": "string",
+																		"default": "",
+																		"examples": [
+																			"As a New York institution that opened in 1936, the Monkey Bar has had its share of the city’s glitz and lore. The red vinyl booths and monkey murals of this swanky Midtown spot have seen everyone from Frank Sinatra to Isadora Duncan, and with the group behind Au Cheval now in charge, you can expect an extravagant menu of steaks, handmade pastas, and classic cocktails executed to the nines."
+																		],
+																		"pattern": "^.*$"
+																	},
+																	"title": {
+																		"$id": "#root/results/venues/items/templates/1789463/content/en-us/why_we_like_it/title", 
+																		"title": "Title", 
+																		"type": "null",
+																		"default": null
+																	}
+																}
+															}
+
+														}
+													}
+
+												}
+											}
+,
+											"id": {
+												"$id": "#root/results/venues/items/templates/1789463/id", 
+												"title": "Id", 
+												"type": "integer",
+												"examples": [
+													1789463
+												],
+												"default": 0
+											},
+											"menu": {
+												"$id": "#root/results/venues/items/templates/1789463/menu", 
+												"title": "Menu", 
+												"type": "object",
+												"properties": {
+												}
+											}
+,
+											"name": {
+												"$id": "#root/results/venues/items/templates/1789463/name", 
+												"title": "Name", 
+												"type": "string",
+												"default": "",
+												"examples": [
+													"UPDATED_DEFAULT_TEMPLATE"
+												],
+												"pattern": "^.*$"
+											},
+											"item_ids": {
+												"$id": "#root/results/venues/items/templates/1789463/item_ids", 
+												"title": "Item_ids", 
+												"type": "array",
+												"default": []
+											},
+											"menu_ids": {
+												"$id": "#root/results/venues/items/templates/1789463/menu_ids", 
+												"title": "Menu_ids", 
+												"type": "array",
+												"default": []
+											}
+										}
+									}
+
+								}
+							}
+,
+							"slots": {
+								"$id": "#root/results/venues/items/slots", 
+								"title": "Slots", 
+								"type": "array",
+								"default": []
+							},
+							"notifies": {
+								"$id": "#root/results/venues/items/notifies", 
+								"title": "Notifies", 
+								"type": "array",
+								"default": []
+							},
+							"pickups": {
+								"$id": "#root/results/venues/items/pickups", 
+								"title": "Pickups", 
+								"type": "object",
+								"properties": {
+									"slots": {
+										"$id": "#root/results/venues/items/pickups/slots", 
+										"title": "Slots", 
+										"type": "array",
+										"default": []
+									},
+									"service_types": {
+										"$id": "#root/results/venues/items/pickups/service_types", 
+										"title": "Service_types", 
+										"type": "object",
+										"properties": {
+										}
+									}
+
+								}
+							}
+
+						}
+					}
+
+				},
+				"meta": {
+					"$id": "#root/results/meta", 
+					"title": "Meta", 
+					"type": "object",
+					"properties": {
+						"offset": {
+							"$id": "#root/results/meta/offset", 
+							"title": "Offset", 
+							"type": "integer",
+							"examples": [
+								1
+							],
+							"default": 0
+						},
+						"limit": {
+							"$id": "#root/results/meta/limit", 
+							"title": "Limit", 
+							"type": "null",
+							"default": null
+						}
+					}
+				}
+
+			}
+		}
+,
+		"guest_token": {
+			"$id": "#root/guest_token", 
+			"title": "Guest_token", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"COGg58ckzoVEXjvQhzrMgdgILZAbNyrNqISUCs5DiSoNMFE8o5u3CX0G9jSnc1GhAXpCA0vXnnPgDFRu6I3b2GmLrWk6omv4u_BUO0ROnuE=-bba7149fb9efadbf1428853143f1546ce3f362e15af4ec140068c695"
+			],
+			"pattern": "^.*$"
+		}
+	}
+}

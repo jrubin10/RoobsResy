@@ -10,7 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
+    "mongodb": "5.1",
+    "mongodb-client": "^0.0.1",
     "node-cron": "^3.0.2",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "generate-schema": "^2.6.0"
   }
 }
