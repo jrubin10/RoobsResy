@@ -1,8 +1,8 @@
 # Instructions:
 
-Apps.js is the driver file with the main code at the bottom. It kicks off the scheduled reservation.
+MakeReservation.js is the driver file.
 
-Before running it, you need to set up your .env file in order to add your personal credentials. The variables they need to align to are at the top of App.js and Authenticate.js:/
+Before running it, you need to set up your .env file in order to add your personal credentials. The variables they need to align to are at the top.
 JR_ResyAPI/
 JR_resy_password/
 JR_resy_email/
@@ -14,7 +14,7 @@ Neither .env nor auth.json will be uploaded here since they are part of .gitigno
 
 # Notes:
 
-You need to give the apps.js variables for the venue and date:
+You need to give the variables for the venue and date:
 
 *VenueID -- get this by going to resy and looking in the chrome dev console to get the VenueID\
 *Day -- choose your date in the format that's in the code\
