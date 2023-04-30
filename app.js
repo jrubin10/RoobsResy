@@ -54,15 +54,21 @@ async function makeVenueFindRequest(baseUrl, lat, long, day, partySize, venueId)
   
       
 
-async function getBookToken(baseUrl, day, partySize, config_id) {
+async function getBookToken(baseUrl, day, partySize, rgscodes) {
   return new Promise((resolve, reject) => {
     const venueBookOptions = {
-      method: 'GET',
-      url: `${baseUrl}?party_size=${partySize}&day=${day}&config_id=${config_id}`,
+      'method': 'POST',
+      'url': 'https://api.resy.com/3/details',
       headers: {
         Authorization: JR_ResyAPI,
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/json'
       },
+      body: JSON.stringify({
+        "commit": 1,
+        "config_id": rgscodes,
+        "day": day,
+        "party_size": partySize
+      }),
       rejectUnauthorized: false, // NOT RECOMMENDED - TEMPORARY FOR TESTING
     };
 
@@ -77,6 +83,12 @@ async function getBookToken(baseUrl, day, partySize, config_id) {
         console.log("getBookToken: "+cookieJar.getCookieString(venueBookOptions));
       } else {
         console.log('get Token call unsuccessful, status code:', response.statusCode);
+        console.log (JSON.stringify({
+          "commit": 1,
+          "config_id": rgscodes,
+          "day": day,
+          "party_size": partySize
+        }));
       }
 
       const data = JSON.parse(body);
@@ -85,6 +97,8 @@ async function getBookToken(baseUrl, day, partySize, config_id) {
     });
   });
 };
+
+
 
 
 async function makeBooking(baseUrl,API_bookToken) {
@@ -113,7 +127,7 @@ async function makeBooking(baseUrl,API_bookToken) {
           console.log('Make Booking API call successful');
           console.log("makeBooking: "+cookieJar.getCookieString(makeBookOptions));
         } else {
-          console.log('Make Booking API call unsuccessful, status code:', response.statusCode);
+        console.log('Make Booking API call unsuccessful, status code:', response.statusCode);
         console.log (makeBookOptions)
         }
   

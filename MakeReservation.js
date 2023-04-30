@@ -12,81 +12,61 @@ const fs = require('fs');
 const JR_X_ResyAuth = fs.readFileSync('./auth.json', 'utf-8');
 const cron = require('node-cron');
 const { getBookToken } = require('./app');
-const { connectToMongoDB } = require('./createMongo');
-const RestaurantDetails = require('./model/RestaurantDetailsSchema')
+//const { connectToMongoDB } = require('./createMongo');
+//const RestaurantDetails = require('./model/RestaurantDetailsSchema')
 
 //Simple Version of POST request to make the reservation
+
 async function makeBooking(API_bookToken,resRGS) {
-  let baseUrl='https://api.resy.com/3/book?';
-  let paymentMethodId=5753141;
+  let baseUrl='https://api.resy.com/3/book';
   console.log ("Testing:"+baseUrl+"-->"+API_bookToken);
     return new Promise((resolve, reject) => {
       const makeBookOptions = 
       {
-        'method': 'POST',
-        'url': 'https://api.resy.com/3/book',
-        'headers': {
-          authority: 'api.resy.com',
-          accept: 'application/json, text/plain, */*',
-          'accept-language': 'en-US,en;q=0.9',
-          'authorization': JR_ResyAPI,
-          'cache-control': 'no-cache',
-          'content-type': 'application/x-www-form-urlencoded',
-          'origin': 'https://widgets.resy.com',
-          'referer': 'https://widgets.resy.com/',
-          'sec-ch-ua': '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
-          'sec-ch-ua-mobile': '?0',
-          'sec-ch-ua-platform': '"Windows"',
-          'sec-fetch-dest': 'empty',
-          'sec-fetch-mode': 'cors',
-          'sec-fetch-site': 'same-site',
-          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
-          'x-origin': 'https://widgets.resy.com',
-          'x-resy-auth-token': JR_X_ResyAuth,
-          'x-resy-universal-auth': JR_X_ResyAuth
-        },
-        form: {
-          'book_token': API_bookToken,
-          'struct_payment_method': '{"id":5753141}',
-          'source_id': 'resy.com-venue-details'
-        },
-        //Commented out when the booking worked with payment with the rest of the form data above
-      // {
-      //   method: 'POST',
-      //   url: `${baseUrl}?`,
-      //   headers: {
-      //     'X-Resy-Auth-Token':JR_X_ResyAuth,
-      //     Authorization: JR_ResyAPI
-      //   },
-      //   formData: {
-      //     'book_token': API_bookToken,
-      //     'struct_payment_method': '{"id":5753141}',
-      //     'source_id': 'resy.com-venue-details'
-      //   },
-        rejectUnauthorized: false, // NOT RECOMMENDED - TEMPORARY FOR TESTING
-      };
-  
-      console.log('Request options:', makeBookOptions);
-
-      request(makeBookOptions, function (error, response, body) {
-        if (error) {
-          reject(error);
-          return;
-        }
-  
-        if (response.statusCode === 200 || response.statusCode===201) {
-          console.log(resRGS+': Make Booking API call successful');
-          const data = JSON.parse(body);
-          const makeBookID = data.reservation_id;
-          resolve(makeBookID);
-        } else {
-        console.log(resRGS+':Make Booking API call unsuccessful, status code:', response.statusCode);
-        console.log("     "+makeBookOptions)
-        }
-
-      });
-    });
+  'method': 'POST',
+  'url': baseUrl,
+  'headers': {
+    'X-Origin': 'https://widgets.resy.com',
+    'X-Resy-Auth-Token': JR_X_ResyAuth,
+    'Authorization': JR_ResyAPI,
+    'X-Resy-Universal-Auth': JR_X_ResyAuth,
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Cache-Control': 'no-cache',
+    'sec-ch-ua-platform': '"Windows"'
+  },
+  form: {
+    'book_token': API_bookToken,
+    'source_id': 'resy.com-venue-details'
+  }
+        //rejectUnauthorized: false}\ // NOT RECOMMENDED - TEMPORARY FOR TESTING
   };
+      console.log(makeBookOptions);
+
+      request(makeBookOptions, function (error, response) {
+        if (error) throw new Error(error);
+        console.log(response.body);
+      });
+
+      // request(makeBookOptions, function (error, response, body) {
+      //   if (error) {
+      //     console.log(response.body);
+      //     reject(error);
+      //     return;
+      //   }
+  
+  //       if (response.statusCode === 200 || response.statusCode===201) {
+  //         console.log(resRGS+': Make Booking API call successful');
+  //         const data = JSON.parse(body);
+  //         const makeBookID = data.reservation_id;
+  //         resolve(makeBookID);
+  //       } else {
+  //       console.log(resRGS+':Make Booking API call unsuccessful, status code:', response.statusCode);
+  //       console.log("     "+makeBookOptions)
+  //       }
+
+  //     });
+   });
+};
   
 //SET PARAMETERS  
 var FindBaseUrl = 'https://api.resy.com/4/find';
@@ -94,19 +74,24 @@ var TokenBaseUrl = 'https://api.resy.com/3/details';
 var MakeBaseUrl ='https://api.resy.com/3/book';
 var lat = '40.722653';
 var long = '-73.998739';
-var day = '2023-03-20';
-var EarliestTime ="17:45:00"
+
+//These lines don't work since the date isn't a string format-------------
+//const today = new Date();
+//const nextMonth = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000));
+//-------------------------------------
+
+var day = "2023-05-30";
+var EarliestTime ="18:00:00"
 var LatestTime ="20:00:00"
 //This will need to be updated per restaurant
-let timeArray=["17:45:00","18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
-var partySize = '4';
-var venueId='60058';//monkeybar
-var templateId='2057534';
-var templateNum='3';
-//var venueId = '66436';//empellon
-var rgsCodePart1 = `rgs://resy/${venueId}/${templateId}/${templateNum}/${day}/${day}/`
-var rgsCodePart2 = `/5/Dining Room`;
-const rgsCodesArray = timeArray.map(time => `rgs://resy/${venueId}/${templateId}/${templateNum}/${day}/${day}/${time}/5/Dining Room`);
+let timeArray=["18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
+var partySize = '2';
+//var venueIdTemplateNum='60058/2057534/3';//monkeybar
+//var venueIdTemplateNum='66436/1925173/2';//empellon
+var venueIdTemplateNum='64593/2080752/1' //Torrissi
+var tableType='Dining Room'//for Torrissi
+
+const rgsCodesArray = timeArray.map(time => `rgs://resy/${venueIdTemplateNum}/${day}/${day}/${time}/${partySize}/${tableType}`);
 var bookToken;
 
 
@@ -169,8 +154,8 @@ await connectToMongoDB();
 //--------------------------------------------
 //---------RUN THE JOB-----------------------
 //Cron Job Schedules the tasks
-//cron.schedule('0 9 * * *', main);
+cron.schedule('0 10 * * *', main);
 //--------------------------------------------
 
 //main();
-saveRestaurantDetails();
+//saveRestaurantDetails();
