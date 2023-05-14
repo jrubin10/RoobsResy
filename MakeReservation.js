@@ -36,7 +36,8 @@ async function makeBooking(API_bookToken,resRGS) {
   },
   form: {
     'book_token': API_bookToken,
-    'source_id': 'resy.com-venue-details'
+    'source_id': 'resy.com-venue-details',
+    'struct_payment_method': '{"id":16674935}'
   }
         //rejectUnauthorized: false}\ // NOT RECOMMENDED - TEMPORARY FOR TESTING
   };
@@ -85,10 +86,10 @@ var EarliestTime ="18:00:00"
 var LatestTime ="20:00:00"
 //This will need to be updated per restaurant
 let timeArray=["18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
-var partySize = '2';
-//var venueIdTemplateNum='60058/2057534/3';//monkeybar
+var partySize = '4';
+//var venueIdTemplateNum='60058/2122015/2';//monkeybar
 //var venueIdTemplateNum='66436/1925173/2';//empellon
-var venueIdTemplateNum='64593/2080752/1' //Torrissi
+var venueIdTemplateNum='64593/1993073/2' //TOrrissi
 var tableType='Dining Room'//for Torrissi
 
 const rgsCodesArray = timeArray.map(time => `rgs://resy/${venueIdTemplateNum}/${day}/${day}/${time}/${partySize}/${tableType}`);
@@ -154,8 +155,8 @@ await connectToMongoDB();
 //--------------------------------------------
 //---------RUN THE JOB-----------------------
 //Cron Job Schedules the tasks
-cron.schedule('0 10 * * *', main);
+//cron.schedule('3 0 10 * * *', main);
 //--------------------------------------------
 
-//main();
+main();
 //saveRestaurantDetails();
