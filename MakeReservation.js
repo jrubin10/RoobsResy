@@ -88,9 +88,10 @@ var LatestTime ="20:00:00"
 let timeArray=["18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
 var partySize = '4';
 //var venueIdTemplateNum='60058/2122015/2';//monkeybar
-//var venueIdTemplateNum='66436/1925173/2';//empellon
-var venueIdTemplateNum='64593/1993073/2' //TOrrissi
-var tableType='Dining Room'//for Torrissi
+var venueIdTemplateNum='66436/1925173/2';//empellon //NEED TO TURN THIS INTO ARRAY OF ALL POSSIBLE COMBOS
+var tableType='Dining Room';//empellon
+//var venueIdTemplateNum='64593/1993073/2' //TOrrissi
+//var tableType='Dining Room'//for Torrissi
 
 const rgsCodesArray = timeArray.map(time => `rgs://resy/${venueIdTemplateNum}/${day}/${day}/${time}/${partySize}/${tableType}`);
 var bookToken;
@@ -136,6 +137,23 @@ async function makeMultipleBookings(bookingCodesArray) {
     return makeBooking(bookingToken, rgscodes);
   });
   return Promise.all(promises);
+}
+
+async function extractJSON (data) {
+// Extract all templates
+const templates = [];
+
+data.results.venues.forEach((venue) => {
+  const venueTemplates = venue.templates.map((template) => {
+    return {
+      venueName: venue.name,
+      templateName: template.name
+    };
+  });
+  templates.push(...venueTemplates);
+});
+
+console.log(templates);
 }
 
 

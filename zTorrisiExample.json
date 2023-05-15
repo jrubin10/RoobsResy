@@ -1,0 +1,978 @@
+{
+    "query": {
+        "day": "2023-05-22",
+        "party_size": 4
+    },
+    "bookmark": null,
+    "results": {
+        "venues": [
+            {
+                "venue": {
+                    "id": {
+                        "resy": 64593
+                    },
+                    "venue_group": {
+                        "id": 4707,
+                        "name": "Major Food Group",
+                        "venues": [
+                            6194,
+                            6249,
+                            7457,
+                            8656,
+                            10389,
+                            29967,
+                            31878,
+                            35679,
+                            35694,
+                            40236,
+                            40237,
+                            43225,
+                            50666,
+                            50667,
+                            50891,
+                            52021,
+                            54500,
+                            56582,
+                            56583,
+                            56584,
+                            56585,
+                            56586,
+                            59954,
+                            60408,
+                            61164,
+                            65073,
+                            70167
+                        ]
+                    },
+                    "name": "Torrisi Bar & Restaurant",
+                    "type": "Italian",
+                    "url_slug": "torrisi",
+                    "price_range": 3,
+                    "average_bill_size": 150.0,
+                    "currency_symbol": "$",
+                    "hospitality_included": 0,
+                    "resy_select": 0,
+                    "is_gdc": 1,
+                    "is_global_dining_access": true,
+                    "is_global_dining_access_only": false,
+                    "requires_reservation_transfers": 0,
+                    "is_gns": 0,
+                    "transaction_processor": "stripe",
+                    "hide_allergy_question": false,
+                    "hide_occasion_question": false,
+                    "hide_special_request_question": false,
+                    "gda_concierge_booking": false,
+                    "tax_included": false,
+                    "rating": 4.84479,
+                    "total_ratings": 1804,
+                    "inventory": {
+                        "type": {
+                            "id": 2
+                        }
+                    },
+                    "reopen": {
+                        "date": null
+                    },
+                    "location": {
+                        "time_zone": "EST5EDT",
+                        "neighborhood": "Nolita",
+                        "geo": {
+                            "lat": 40.72423,
+                            "lon": -73.99539
+                        },
+                        "code": "ny",
+                        "name": "New York",
+                        "url_slug": null
+                    },
+                    "travel_time": {
+                        "distance": 5390.838789475546
+                    },
+                    "source": {
+                        "name": null,
+                        "logo": null,
+                        "terms_of_service": null,
+                        "privacy_policy": null
+                    },
+                    "service_types": {
+                        "2": {}
+                    },
+                    "top": true,
+                    "ticket": {
+                        "average": 150.0,
+                        "average_str": "$150"
+                    },
+                    "currency": {
+                        "symbol": "$",
+                        "code": "USD"
+                    },
+                    "is_rga": true,
+                    "is_rga_only": false,
+                    "default_template": "1824546",
+                    "responsive_images": {
+                        "originals": {
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a": {
+                                "url": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg"
+                            },
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23": {
+                                "url": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg"
+                            },
+                            "46af48af4a25edb4cea14b56bbe93257501735b9": {
+                                "url": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg"
+                            },
+                            "024ac3200a10c78d6e557f775026ff11df9bb976": {
+                                "url": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg"
+                            },
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285": {
+                                "url": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg"
+                            }
+                        },
+                        "urls": {
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a": {
+                                "1:1": {
+                                    "200": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/200",
+                                    "400": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/1600"
+                                },
+                                "4:3": {
+                                    "400": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/4:3/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/4:3/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/4:3/1600"
+                                },
+                                "16:9": {
+                                    "400": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/16:9/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/16:9/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/16:9/1600"
+                                }
+                            },
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23": {
+                                "1:1": {
+                                    "200": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/200",
+                                    "400": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/1600"
+                                },
+                                "4:3": {
+                                    "400": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/4:3/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/4:3/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/4:3/1600"
+                                },
+                                "16:9": {
+                                    "400": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/16:9/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/16:9/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/16:9/1600"
+                                }
+                            },
+                            "46af48af4a25edb4cea14b56bbe93257501735b9": {
+                                "1:1": {
+                                    "200": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/200",
+                                    "400": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/1600"
+                                },
+                                "4:3": {
+                                    "400": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/4:3/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/4:3/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/4:3/1600"
+                                },
+                                "16:9": {
+                                    "400": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/16:9/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/16:9/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/16:9/1600"
+                                }
+                            },
+                            "024ac3200a10c78d6e557f775026ff11df9bb976": {
+                                "1:1": {
+                                    "200": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/200",
+                                    "400": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/1600"
+                                },
+                                "4:3": {
+                                    "400": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/4:3/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/4:3/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/4:3/1600"
+                                },
+                                "16:9": {
+                                    "400": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/16:9/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/16:9/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/16:9/1600"
+                                }
+                            },
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285": {
+                                "1:1": {
+                                    "200": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/200",
+                                    "400": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/1600"
+                                },
+                                "4:3": {
+                                    "400": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/4:3/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/4:3/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/4:3/1600"
+                                },
+                                "16:9": {
+                                    "400": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/16:9/400",
+                                    "800": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/16:9/800",
+                                    "1600": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/16:9/1600"
+                                }
+                            }
+                        },
+                        "urls_by_resolution": {
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a": {
+                                "200": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/200"
+                                },
+                                "400": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/400",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/4:3/400",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/16:9/400"
+                                },
+                                "800": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/800",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/4:3/800",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/16:9/800"
+                                },
+                                "1600": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/1:1/1600",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/4:3/1600",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/16:9/1600"
+                                }
+                            },
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23": {
+                                "200": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/200"
+                                },
+                                "400": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/400",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/4:3/400",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/16:9/400"
+                                },
+                                "800": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/800",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/4:3/800",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/16:9/800"
+                                },
+                                "1600": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/1:1/1600",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/4:3/1600",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/16:9/1600"
+                                }
+                            },
+                            "46af48af4a25edb4cea14b56bbe93257501735b9": {
+                                "200": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/200"
+                                },
+                                "400": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/400",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/4:3/400",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/16:9/400"
+                                },
+                                "800": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/800",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/4:3/800",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/16:9/800"
+                                },
+                                "1600": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/1:1/1600",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/4:3/1600",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/16:9/1600"
+                                }
+                            },
+                            "024ac3200a10c78d6e557f775026ff11df9bb976": {
+                                "200": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/200"
+                                },
+                                "400": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/400",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/4:3/400",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/16:9/400"
+                                },
+                                "800": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/800",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/4:3/800",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/16:9/800"
+                                },
+                                "1600": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/1:1/1600",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/4:3/1600",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/16:9/1600"
+                                }
+                            },
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285": {
+                                "200": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/200"
+                                },
+                                "400": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/400",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/4:3/400",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/16:9/400"
+                                },
+                                "800": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/800",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/4:3/800",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/16:9/800"
+                                },
+                                "1600": {
+                                    "1:1": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/1:1/1600",
+                                    "4:3": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/4:3/1600",
+                                    "16:9": "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/16:9/1600"
+                                }
+                            }
+                        },
+                        "file_names": [
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a",
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23",
+                            "46af48af4a25edb4cea14b56bbe93257501735b9",
+                            "024ac3200a10c78d6e557f775026ff11df9bb976",
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285"
+                        ],
+                        "aspect_ratios": {
+                            "1:1": {
+                                "200": "200x200",
+                                "400": "400x400",
+                                "800": "800x800",
+                                "1600": "1600x1600"
+                            },
+                            "4:3": {
+                                "400": "400x300",
+                                "800": "800x600",
+                                "1600": "1600x1200"
+                            },
+                            "16:9": {
+                                "400": "400x225",
+                                "800": "800x450",
+                                "1600": "1600x900"
+                            }
+                        }
+                    },
+                    "notify_options": [
+                        {
+                            "service_type_id": 2,
+                            "min_request_datetime": "2023-05-22 17:00:00",
+                            "max_request_datetime": "2023-05-22 23:30:00",
+                            "step_minutes": 30
+                        }
+                    ],
+                    "favorite": null,
+                    "waitlist": {
+                        "available": 0,
+                        "label": "Join Wait List",
+                        "current": null
+                    },
+                    "supports_pickups": 0,
+                    "collections": [
+                        {
+                            "id": 1089,
+                            "type_id": 1,
+                            "file_name": "chef-picks",
+                            "image": "https://s3.amazonaws.com/resy.com/images/lists/chef-picks.svg",
+                            "name": "Splurge-Worthy Dining in New York",
+                            "short_name": "Splurge Worthy",
+                            "description": "From blowout meals to special occasion dining, here are our favorite restaurants worth the price tag."
+                        },
+                        {
+                            "id": 888,
+                            "type_id": 2,
+                            "file_name": "book-tonight",
+                            "image": "https://s3.amazonaws.com/resy.com/images/lists/book-tonight.svg",
+                            "name": "Book Tonight",
+                            "short_name": "Book Tonight",
+                            "description": "Book these venues tonight."
+                        },
+                        {
+                            "id": 889,
+                            "type_id": 3,
+                            "file_name": "climbing",
+                            "image": "https://s3.amazonaws.com/resy.com/images/lists/climbing.svg",
+                            "name": "Climbing",
+                            "short_name": "Climbing",
+                            "description": "You dine, the restaurant climbs. Climbing on Resy is the only data-driven list powered by your reservations. Consider it a curated guide by locals, for locals."
+                        },
+                        {
+                            "id": 890,
+                            "type_id": 4,
+                            "file_name": "new",
+                            "image": "https://s3.amazonaws.com/resy.com/images/lists/new.svg",
+                            "name": "New on Resy",
+                            "short_name": "New on Resy",
+                            "description": "Lucky for you, these restaurants are brand-New on Resy. We've sorted them by popularity because if you know, you know."
+                        },
+                        {
+                            "id": 891,
+                            "type_id": 5,
+                            "file_name": "toprated",
+                            "image": "https://s3.amazonaws.com/resy.com/images/lists/toprated.svg",
+                            "name": "Top Rated",
+                            "short_name": "Top Rated",
+                            "description": "A crowd-sourced stamp of approval. The five-star treatment. Resy's top-rated restaurants according to you, the guests."
+                        },
+                        {
+                            "id": 14,
+                            "type_id": 10,
+                            "file_name": "rga",
+                            "image": "https://s3.amazonaws.com/resy.com/images/lists/rga.svg",
+                            "name": "Global Dining Access",
+                            "short_name": "Global Dining Access",
+                            "description": "Global Dining Access by Resy gives eligible American Express\u00ae Card Members access to sought-after chefs and restaurants across the globe. To learn more, visit resy.com/globaldiningaccess."
+                        }
+                    ],
+                    "content": [
+                        {
+                            "attribution": null,
+                            "body": "The beloved destination for Italian American food from the same team behind Carbone is finally back, and while the mozzarella is still flowing, it\u2019s not quite the same as you might remember; it\u2019s even better.",
+                            "display": {
+                                "type": "text"
+                            },
+                            "icon": {
+                                "url": "https://s3.amazonaws.com/resy.com/images/icons/heart.svg"
+                            },
+                            "locale": {
+                                "language": "en-us"
+                            },
+                            "name": "why_we_like_it",
+                            "title": null
+                        }
+                    ],
+                    "allow_bypass_payment_method": 1,
+                    "events": []
+                },
+                "templates": {
+                    "1824546": {
+                        "is_paid": false,
+                        "venue_share": null,
+                        "restriction_id": null,
+                        "payment_structure": null,
+                        "cancellation_fee": null,
+                        "secs_cancel_cut_off": null,
+                        "time_cancel_cut_off": null,
+                        "secs_change_cut_off": null,
+                        "time_change_cut_off": null,
+                        "large_party_size_cancel": null,
+                        "large_party_cancellation_fee": null,
+                        "large_party_secs_cancel_cut_off": null,
+                        "large_party_time_cancel_cut_off": null,
+                        "large_party_secs_change_cut_off": null,
+                        "large_party_time_change_cut_off": null,
+                        "deposit_fee": null,
+                        "service_charge": null,
+                        "service_charge_options": [],
+                        "images": [
+                            "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/640x360"
+                        ],
+                        "raw_image_names": [
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a",
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23",
+                            "46af48af4a25edb4cea14b56bbe93257501735b9",
+                            "024ac3200a10c78d6e557f775026ff11df9bb976",
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285"
+                        ],
+                        "image_dimensions": [
+                            [
+                                5158,
+                                6675
+                            ],
+                            [
+                                7808,
+                                5373
+                            ],
+                            [
+                                9362,
+                                6241
+                            ],
+                            [
+                                6348,
+                                4234
+                            ],
+                            [
+                                7952,
+                                5304
+                            ]
+                        ],
+                        "is_default": 1,
+                        "is_event": 0,
+                        "is_pickup": 0,
+                        "pickup_highlight": 0,
+                        "venue_id": 64593,
+                        "reservation_config": {
+                            "badge": null,
+                            "type": "",
+                            "secs_off_market": null,
+                            "time_off_market": null
+                        },
+                        "turn_times": [
+                            {
+                                "secs_amount": 5400,
+                                "size": {
+                                    "max": 1,
+                                    "min": 1
+                                }
+                            },
+                            {
+                                "secs_amount": 5400,
+                                "size": {
+                                    "max": 2,
+                                    "min": 2
+                                }
+                            },
+                            {
+                                "secs_amount": 5400,
+                                "size": {
+                                    "max": 3,
+                                    "min": 3
+                                }
+                            },
+                            {
+                                "secs_amount": 5400,
+                                "size": {
+                                    "max": 4,
+                                    "min": 4
+                                }
+                            },
+                            {
+                                "secs_amount": 5400,
+                                "size": {
+                                    "max": null,
+                                    "min": 5
+                                }
+                            }
+                        ],
+                        "display_config": {
+                            "color": {
+                                "background": null,
+                                "font": null
+                            }
+                        },
+                        "content": {
+                            "en-us": {
+                                "about": {
+                                    "attribution": null,
+                                    "body": "Housed within the legendary Puck Building in downtown Manhattan, Torrisi Bar & Restaurant is the most personal effort of the famed chef and Major Food Group Co-Founder Rich Torrisi\u2019s career. At his new restaurant, the menu is inspired by the soul of Little Italy and celebrates the highest levels of culinary execution, the most spectacular ingredients, and an inspired sense of creativity. With vaulted ceilings, incredible artwork, and interior design by Garrett Singer Architecture, the grand space is a singular New York stage for what is poised to become one of the most essential Italian restaurants in the United States. \n\nTorrisi Bar & Restaurant is located at 275 Mulberry Street, just down the block from where, over a decade ago, Major Food Group Co-Founders Rich Torrisi, Mario Carbone, and Jeff Zalaznick rose to prominence with their first project together, the groundbreaking Torrisi Italian Specialties.",
+                                    "title": null
+                                },
+                                "need_to_know": {
+                                    "attribution": null,
+                                    "body": "We hold our bar seating for walk ins. Guests are encouraged to stop in to dine at the bar!\n\nPlease dress for the occasion. Any guest who does not appear sufficiently well-presented may be refused entry. Tailored shorts are permitted indoor and outdoors. Athletic wear is kindly prohibited.",
+                                    "title": null
+                                },
+                                "why_we_like_it": {
+                                    "attribution": null,
+                                    "body": "The beloved destination for Italian American food from the same team behind Carbone is finally back, and while the mozzarella is still flowing, it\u2019s not quite the same as you might remember; it\u2019s even better.",
+                                    "title": null
+                                }
+                            }
+                        },
+                        "id": 1824546,
+                        "menu": {},
+                        "name": "UPDATED_DEFAULT_TEMPLATE",
+                        "item_ids": [],
+                        "menu_ids": []
+                    },
+                    "2080751": {
+                        "is_paid": true,
+                        "venue_share": null,
+                        "restriction_id": null,
+                        "payment_structure": null,
+                        "cancellation_fee": 50.0,
+                        "secs_cancel_cut_off": 0,
+                        "time_cancel_cut_off": "12:00:00",
+                        "secs_change_cut_off": 0,
+                        "time_change_cut_off": "12:00:00",
+                        "large_party_size_cancel": null,
+                        "large_party_cancellation_fee": null,
+                        "large_party_secs_cancel_cut_off": null,
+                        "large_party_time_cancel_cut_off": null,
+                        "large_party_secs_change_cut_off": null,
+                        "large_party_time_change_cut_off": null,
+                        "deposit_fee": null,
+                        "service_charge": null,
+                        "service_charge_options": [],
+                        "images": [
+                            "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/640x360"
+                        ],
+                        "raw_image_names": [
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a",
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23",
+                            "46af48af4a25edb4cea14b56bbe93257501735b9",
+                            "024ac3200a10c78d6e557f775026ff11df9bb976",
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285"
+                        ],
+                        "image_dimensions": [
+                            [
+                                5158,
+                                6675
+                            ],
+                            [
+                                7808,
+                                5373
+                            ],
+                            [
+                                9362,
+                                6241
+                            ],
+                            [
+                                6348,
+                                4234
+                            ],
+                            [
+                                7952,
+                                5304
+                            ]
+                        ],
+                        "is_default": 0,
+                        "is_event": 0,
+                        "is_pickup": 0,
+                        "pickup_highlight": 0,
+                        "venue_id": 64593,
+                        "reservation_config": {
+                            "badge": null,
+                            "type": "",
+                            "secs_off_market": 1800,
+                            "time_off_market": null
+                        },
+                        "turn_times": [
+                            {
+                                "secs_amount": 7200,
+                                "size": {
+                                    "max": 1,
+                                    "min": 1
+                                }
+                            },
+                            {
+                                "secs_amount": 8100,
+                                "size": {
+                                    "max": 2,
+                                    "min": 2
+                                }
+                            },
+                            {
+                                "secs_amount": 9000,
+                                "size": {
+                                    "max": 4,
+                                    "min": 3
+                                }
+                            },
+                            {
+                                "secs_amount": 10800,
+                                "size": {
+                                    "max": 6,
+                                    "min": 5
+                                }
+                            },
+                            {
+                                "secs_amount": 12600,
+                                "size": {
+                                    "max": null,
+                                    "min": 7
+                                }
+                            }
+                        ],
+                        "display_config": {
+                            "color": {
+                                "background": null,
+                                "font": null
+                            }
+                        },
+                        "content": {
+                            "en-us": {
+                                "about": {
+                                    "attribution": null,
+                                    "body": "Housed within the legendary Puck Building in downtown Manhattan, Torrisi Bar & Restaurant is the most personal effort of the famed chef and Major Food Group Co-Founder Rich Torrisi\u2019s career. At his new restaurant, the menu is inspired by the soul of Little Italy and celebrates the highest levels of culinary execution, the most spectacular ingredients, and an inspired sense of creativity. With vaulted ceilings, incredible artwork, and interior design by Garrett Singer Architecture, the grand space is a singular New York stage for what is poised to become one of the most essential Italian restaurants in the United States. \n\nTorrisi Bar & Restaurant is located at 275 Mulberry Street, just down the block from where, over a decade ago, Major Food Group Co-Founders Rich Torrisi, Mario Carbone, and Jeff Zalaznick rose to prominence with their first project together, the groundbreaking Torrisi Italian Specialties.",
+                                    "title": null
+                                },
+                                "need_to_know": {
+                                    "attribution": null,
+                                    "body": "We hold our bar seating for walk ins. Guests are encouraged to stop in to dine at the bar!\n\nPlease dress for the occasion. Any guest who does not appear sufficiently well-presented may be refused entry. Tailored shorts are permitted indoor and outdoors. Athletic wear is kindly prohibited.",
+                                    "title": null
+                                },
+                                "why_we_like_it": {
+                                    "attribution": null,
+                                    "body": "The beloved destination for Italian American food from the same team behind Carbone is finally back, and while the mozzarella is still flowing, it\u2019s not quite the same as you might remember; it\u2019s even better.",
+                                    "title": null
+                                }
+                            }
+                        },
+                        "id": 2080751,
+                        "menu": {},
+                        "name": "2080751",
+                        "item_ids": [],
+                        "menu_ids": []
+                    },
+                    "2080752": {
+                        "is_paid": true,
+                        "venue_share": null,
+                        "restriction_id": null,
+                        "payment_structure": null,
+                        "cancellation_fee": 50.0,
+                        "secs_cancel_cut_off": 0,
+                        "time_cancel_cut_off": "12:00:00",
+                        "secs_change_cut_off": 0,
+                        "time_change_cut_off": "12:00:00",
+                        "large_party_size_cancel": null,
+                        "large_party_cancellation_fee": null,
+                        "large_party_secs_cancel_cut_off": null,
+                        "large_party_time_cancel_cut_off": null,
+                        "large_party_secs_change_cut_off": null,
+                        "large_party_time_change_cut_off": null,
+                        "deposit_fee": null,
+                        "service_charge": null,
+                        "service_charge_options": [],
+                        "images": [
+                            "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/640x360"
+                        ],
+                        "raw_image_names": [
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a",
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23",
+                            "46af48af4a25edb4cea14b56bbe93257501735b9",
+                            "024ac3200a10c78d6e557f775026ff11df9bb976",
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285"
+                        ],
+                        "image_dimensions": [
+                            [
+                                5158,
+                                6675
+                            ],
+                            [
+                                7808,
+                                5373
+                            ],
+                            [
+                                9362,
+                                6241
+                            ],
+                            [
+                                6348,
+                                4234
+                            ],
+                            [
+                                7952,
+                                5304
+                            ]
+                        ],
+                        "is_default": 0,
+                        "is_event": 0,
+                        "is_pickup": 0,
+                        "pickup_highlight": 0,
+                        "venue_id": 64593,
+                        "reservation_config": {
+                            "badge": null,
+                            "type": "Dining Room",
+                            "secs_off_market": 1800,
+                            "time_off_market": null
+                        },
+                        "turn_times": [
+                            {
+                                "secs_amount": 7200,
+                                "size": {
+                                    "max": 2,
+                                    "min": 1
+                                }
+                            },
+                            {
+                                "secs_amount": 9000,
+                                "size": {
+                                    "max": 4,
+                                    "min": 3
+                                }
+                            },
+                            {
+                                "secs_amount": 10800,
+                                "size": {
+                                    "max": 6,
+                                    "min": 5
+                                }
+                            },
+                            {
+                                "secs_amount": 12600,
+                                "size": {
+                                    "max": null,
+                                    "min": 7
+                                }
+                            }
+                        ],
+                        "display_config": {
+                            "color": {
+                                "background": null,
+                                "font": null
+                            }
+                        },
+                        "content": {
+                            "en-us": {
+                                "about": {
+                                    "attribution": null,
+                                    "body": "Housed within the legendary Puck Building in downtown Manhattan, Torrisi Bar & Restaurant is the most personal effort of the famed chef and Major Food Group Co-Founder Rich Torrisi\u2019s career. At his new restaurant, the menu is inspired by the soul of Little Italy and celebrates the highest levels of culinary execution, the most spectacular ingredients, and an inspired sense of creativity. With vaulted ceilings, incredible artwork, and interior design by Garrett Singer Architecture, the grand space is a singular New York stage for what is poised to become one of the most essential Italian restaurants in the United States. \n\nTorrisi Bar & Restaurant is located at 275 Mulberry Street, just down the block from where, over a decade ago, Major Food Group Co-Founders Rich Torrisi, Mario Carbone, and Jeff Zalaznick rose to prominence with their first project together, the groundbreaking Torrisi Italian Specialties.",
+                                    "title": null
+                                },
+                                "need_to_know": {
+                                    "attribution": null,
+                                    "body": "We hold our bar seating for walk ins. Guests are encouraged to stop in to dine at the bar!\n\nPlease dress for the occasion. Any guest who does not appear sufficiently well-presented may be refused entry. Tailored shorts are permitted indoor and outdoors. Athletic wear is kindly prohibited.",
+                                    "title": null
+                                },
+                                "why_we_like_it": {
+                                    "attribution": null,
+                                    "body": "The beloved destination for Italian American food from the same team behind Carbone is finally back, and while the mozzarella is still flowing, it\u2019s not quite the same as you might remember; it\u2019s even better.",
+                                    "title": null
+                                }
+                            }
+                        },
+                        "id": 2080752,
+                        "menu": {},
+                        "name": "2080752",
+                        "item_ids": [],
+                        "menu_ids": []
+                    },
+                    "2080753": {
+                        "is_paid": true,
+                        "venue_share": null,
+                        "restriction_id": null,
+                        "payment_structure": null,
+                        "cancellation_fee": 50.0,
+                        "secs_cancel_cut_off": 0,
+                        "time_cancel_cut_off": "12:00:00",
+                        "secs_change_cut_off": 0,
+                        "time_change_cut_off": "12:00:00",
+                        "large_party_size_cancel": null,
+                        "large_party_cancellation_fee": null,
+                        "large_party_secs_cancel_cut_off": null,
+                        "large_party_time_cancel_cut_off": null,
+                        "large_party_secs_change_cut_off": null,
+                        "large_party_time_change_cut_off": null,
+                        "deposit_fee": null,
+                        "service_charge": null,
+                        "service_charge_options": [],
+                        "images": [
+                            "https://image.resy.com/3/003/2/64593/73a7ec277e4235614119aa2f061b9bf1588ace4a/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/ae1f7460f6624213ca25ae3897a5d91d4ed28a23/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/46af48af4a25edb4cea14b56bbe93257501735b9/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/024ac3200a10c78d6e557f775026ff11df9bb976/jpg/640x360",
+                            "https://image.resy.com/3/003/2/64593/8306cb05646eba8335ec14a7c5bd069d7670d285/jpg/640x360"
+                        ],
+                        "raw_image_names": [
+                            "73a7ec277e4235614119aa2f061b9bf1588ace4a",
+                            "ae1f7460f6624213ca25ae3897a5d91d4ed28a23",
+                            "46af48af4a25edb4cea14b56bbe93257501735b9",
+                            "024ac3200a10c78d6e557f775026ff11df9bb976",
+                            "8306cb05646eba8335ec14a7c5bd069d7670d285"
+                        ],
+                        "image_dimensions": [
+                            [
+                                5158,
+                                6675
+                            ],
+                            [
+                                7808,
+                                5373
+                            ],
+                            [
+                                9362,
+                                6241
+                            ],
+                            [
+                                6348,
+                                4234
+                            ],
+                            [
+                                7952,
+                                5304
+                            ]
+                        ],
+                        "is_default": 0,
+                        "is_event": 0,
+                        "is_pickup": 0,
+                        "pickup_highlight": 0,
+                        "venue_id": 64593,
+                        "reservation_config": {
+                            "badge": null,
+                            "type": "Bar Room",
+                            "secs_off_market": 1800,
+                            "time_off_market": null
+                        },
+                        "turn_times": [
+                            {
+                                "secs_amount": 7200,
+                                "size": {
+                                    "max": 2,
+                                    "min": 1
+                                }
+                            },
+                            {
+                                "secs_amount": 9000,
+                                "size": {
+                                    "max": 4,
+                                    "min": 3
+                                }
+                            },
+                            {
+                                "secs_amount": 10800,
+                                "size": {
+                                    "max": 6,
+                                    "min": 5
+                                }
+                            },
+                            {
+                                "secs_amount": 12600,
+                                "size": {
+                                    "max": null,
+                                    "min": 7
+                                }
+                            }
+                        ],
+                        "display_config": {
+                            "color": {
+                                "background": null,
+                                "font": null
+                            }
+                        },
+                        "content": {
+                            "en-us": {
+                                "about": {
+                                    "attribution": null,
+                                    "body": "Housed within the legendary Puck Building in downtown Manhattan, Torrisi Bar & Restaurant is the most personal effort of the famed chef and Major Food Group Co-Founder Rich Torrisi\u2019s career. At his new restaurant, the menu is inspired by the soul of Little Italy and celebrates the highest levels of culinary execution, the most spectacular ingredients, and an inspired sense of creativity. With vaulted ceilings, incredible artwork, and interior design by Garrett Singer Architecture, the grand space is a singular New York stage for what is poised to become one of the most essential Italian restaurants in the United States. \n\nTorrisi Bar & Restaurant is located at 275 Mulberry Street, just down the block from where, over a decade ago, Major Food Group Co-Founders Rich Torrisi, Mario Carbone, and Jeff Zalaznick rose to prominence with their first project together, the groundbreaking Torrisi Italian Specialties.",
+                                    "title": null
+                                },
+                                "need_to_know": {
+                                    "attribution": null,
+                                    "body": "We hold our bar seating for walk ins. Guests are encouraged to stop in to dine at the bar!\n\nPlease dress for the occasion. Any guest who does not appear sufficiently well-presented may be refused entry. Tailored shorts are permitted indoor and outdoors. Athletic wear is kindly prohibited.",
+                                    "title": null
+                                },
+                                "why_we_like_it": {
+                                    "attribution": null,
+                                    "body": "The beloved destination for Italian American food from the same team behind Carbone is finally back, and while the mozzarella is still flowing, it\u2019s not quite the same as you might remember; it\u2019s even better.",
+                                    "title": null
+                                }
+                            }
+                        },
+                        "id": 2080753,
+                        "menu": {},
+                        "name": "2080753",
+                        "item_ids": [],
+                        "menu_ids": []
+                    }
+                },
+                "slots": [],
+                "notifies": [],
+                "pickups": {
+                    "slots": [],
+                    "service_types": {}
+                }
+            }
+        ],
+        "meta": {
+            "offset": 1,
+            "limit": null
+        }
+    },
+    "guest_token": "mHu02qNd2qQ79cvHzPiHn_Qbw|fjIBH1_ZXcQvdb4w|fnNiQpLY2KdI20tyLarKqA89IwBfj6_tfB7hO2UGo28ioedKOtO_3vcBbltsMU6A=-f50d5b9c5fb9e0844dd9fba55824923317bd1ebf736e8fad4db3edd3"
+}
