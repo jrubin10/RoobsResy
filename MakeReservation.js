@@ -81,17 +81,19 @@ var long = '-73.998739';
 //const nextMonth = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000));
 //-------------------------------------
 
-var day = "2023-05-30";
-var EarliestTime ="18:00:00"
+var day = "2023-07-02";
+var EarliestTime ="18:30:00"
 var LatestTime ="20:00:00"
 //This will need to be updated per restaurant
-let timeArray=["18:00:00","18:15:00","18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
+let timeArray=["18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
 var partySize = '4';
 //var venueIdTemplateNum='60058/2122015/2';//monkeybar
-var venueIdTemplateNum='66436/1925173/2';//empellon //NEED TO TURN THIS INTO ARRAY OF ALL POSSIBLE COMBOS
-var tableType='Dining Room';//empellon
+//var venueIdTemplateNum='66436/1925173/2';//empellon //NEED TO TURN THIS INTO ARRAY OF ALL POSSIBLE COMBOS
+//var tableType='Dining Room';//empellon
 //var venueIdTemplateNum='64593/1993073/2' //TOrrissi
 //var tableType='Dining Room'//for Torrissi
+var venueIdTemplateNum='834/2078816/2';//4charles
+var tableType='Dining Room';//4charles
 
 const rgsCodesArray = timeArray.map(time => `rgs://resy/${venueIdTemplateNum}/${day}/${day}/${time}/${partySize}/${tableType}`);
 var bookToken;
