@@ -160,7 +160,6 @@ async function makeMultipleBookings(bookingCodesArray) {
   }
 }
 
-
 async function extractJSON (data) {
 // Extract all templates
 const templates = [];
