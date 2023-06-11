@@ -23,7 +23,7 @@ const cron = require('node-cron');
   try {
     //console.log(JR_resy_email + " " + JR_resy_password);
     const auth = await authenticate('https://api.resy.com/3/auth/password',JR_resy_email,JR_resy_password);
-    //console.log(auth);
+    console.log(auth);
     fs.writeFileSync('./auth.json', auth);
     console.log('Auth token saved to auth.json');
   } catch (error) {

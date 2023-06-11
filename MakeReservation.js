@@ -12,62 +12,52 @@ const fs = require('fs');
 const JR_X_ResyAuth = fs.readFileSync('./auth.json', 'utf-8');
 const cron = require('node-cron');
 const { getBookToken } = require('./app');
-//const { connectToMongoDB } = require('./createMongo');
-//const RestaurantDetails = require('./model/RestaurantDetailsSchema')
+
 
 //Simple Version of POST request to make the reservation
 
-async function makeBooking(API_bookToken,resRGS) {
-  let baseUrl='https://api.resy.com/3/book';
-  console.log ("Testing:"+baseUrl+"-->"+API_bookToken);
-    return new Promise((resolve, reject) => {
-      const makeBookOptions = 
-      {
-  'method': 'POST',
-  'url': baseUrl,
-  'headers': {
-    'X-Origin': 'https://widgets.resy.com',
-    'X-Resy-Auth-Token': JR_X_ResyAuth,
-    'Authorization': JR_ResyAPI,
-    'X-Resy-Universal-Auth': JR_X_ResyAuth,
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Cache-Control': 'no-cache',
-    'sec-ch-ua-platform': '"Windows"'
-  },
-  form: {
-    'book_token': API_bookToken,
-    'source_id': 'resy.com-venue-details',
-    'struct_payment_method': '{"id":16674935}'
-  }
-        //rejectUnauthorized: false}\ // NOT RECOMMENDED - TEMPORARY FOR TESTING
-  };
-      console.log(makeBookOptions);
+async function makeBooking(API_bookToken, resRGS) {
+  let baseUrl = 'https://api.resy.com/3/book';
+  console.log("Testing:" + baseUrl + "-->" + API_bookToken);
+  return new Promise((resolve, reject) => {
+    const makeBookOptions = {
+      'method': 'POST',
+      'url': baseUrl,
+      'headers': {
+        'X-Origin': 'https://widgets.resy.com',
+        'X-Resy-Auth-Token': JR_X_ResyAuth,
+        'Authorization': JR_ResyAPI,
+        'X-Resy-Universal-Auth': JR_X_ResyAuth,
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Cache-Control': 'no-cache',
+        'sec-ch-ua-platform': '"Windows"'
+      },
+      form: {
+        'book_token': API_bookToken,
+        'source_id': 'resy.com-venue-details',
+        'struct_payment_method': '{"id":16674935}'
+      }
+    };
 
-      request(makeBookOptions, function (error, response) {
-        if (error) throw new Error(error);
-        console.log(response.body);
-      });
+    console.log(makeBookOptions);
 
-      // request(makeBookOptions, function (error, response, body) {
-      //   if (error) {
-      //     console.log(response.body);
-      //     reject(error);
-      //     return;
-      //   }
-  
-  //       if (response.statusCode === 200 || response.statusCode===201) {
-  //         console.log(resRGS+': Make Booking API call successful');
-  //         const data = JSON.parse(body);
-  //         const makeBookID = data.reservation_id;
-  //         resolve(makeBookID);
-  //       } else {
-  //       console.log(resRGS+':Make Booking API call unsuccessful, status code:', response.statusCode);
-  //       console.log("     "+makeBookOptions)
-  //       }
+    request(makeBookOptions, function (error, response) {
+      if (error) {
+        reject(error);
+      } else {
+        const responseBody = JSON.parse(response.body);
+        console.log("Booking Result:", responseBody);
 
-  //     });
-   });
+        if (responseBody.hasOwnProperty("reservation_id")) {
+          resolve({ success: true, body: responseBody }); // Resolve the promise for a successful booking
+        } else {
+          resolve({ success: false, body: responseBody }); // Resolve the promise for an unsuccessful booking
+        }
+      }
+    });
+  });
 };
+
   
 //SET PARAMETERS  
 var FindBaseUrl = 'https://api.resy.com/4/find';
@@ -76,11 +66,6 @@ var MakeBaseUrl ='https://api.resy.com/3/book';
 var lat = '40.722653';
 var long = '-73.998739';
 
-//These lines don't work since the date isn't a string format-------------
-//const today = new Date();
-//const nextMonth = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000));
-//-------------------------------------
-
 var day = "2023-07-02";
 var EarliestTime ="18:30:00"
 var LatestTime ="20:00:00"
@@ -88,8 +73,8 @@ var LatestTime ="20:00:00"
 let timeArray=["18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
 var partySize = '4';
 //var venueIdTemplateNum='60058/2122015/2';//monkeybar
-//var venueIdTemplateNum='66436/1925173/2';//empellon //NEED TO TURN THIS INTO ARRAY OF ALL POSSIBLE COMBOS
-//var tableType='Dining Room';//empellon
+//var venueIdTemplateNum='66436/1943671/2';//empellon //NEED TO TURN THIS INTO ARRAY OF ALL POSSIBLE COMBOS
+//var tableType='Outside';//empellon
 //var venueIdTemplateNum='64593/1993073/2' //TOrrissi
 //var tableType='Dining Room'//for Torrissi
 var venueIdTemplateNum='834/2078816/2';//4charles
@@ -134,12 +119,47 @@ async function extractBookingTokensAndRgsCodes(jsonFile) {
 
 // Make multiple bookings with booking codes and rgs codes
 async function makeMultipleBookings(bookingCodesArray) {
-  const promises = bookingCodesArray.map(({ bookingToken, rgscodes }) => {
-    console.log(bookingToken+"::"+rgscodes+";");
-    return makeBooking(bookingToken, rgscodes);
-  });
-  return Promise.all(promises);
+  let bookingSuccessful = false; // Flag to track if a booking was successful
+  let attempts = 0; // Counter for the number of attempts made
+
+  while (attempts < 5) {
+    for (const { bookingToken, rgscodes } of bookingCodesArray) {
+      console.log(bookingToken + "::" + rgscodes + ";");
+
+      try {
+        const result = await makeBooking(bookingToken, rgscodes);
+
+        if (result.success) {
+          console.log("Booking successful!");
+          console.log("Booking Result:", result.body);
+          bookingSuccessful = true;
+          break; // Stop making further bookings
+        } else {
+          console.log("Booking unsuccessful!");
+          console.log("Booking Result:", result.body);
+        }
+      } catch (error) {
+        console.error("Error making booking:", error);
+      }
+    }
+
+    if (bookingSuccessful) {
+      break; // Exit the loop if a successful booking is made
+    }
+
+    attempts++;
+
+    if (attempts < 5) {
+      console.log(`Waiting for 3 seconds before the next attempt...`);
+      await new Promise((resolve) => setTimeout(resolve, 3000)); // Delay for 3 seconds
+    }
+  }
+
+  if (!bookingSuccessful) {
+    console.log("All bookings unsuccessful");
+  }
 }
+
 
 async function extractJSON (data) {
 // Extract all templates
@@ -159,17 +179,10 @@ console.log(templates);
 }
 
 
-async function main()
-{
-await getBookingTokenArray();
-const bookingTokensAndRgsCodesArray = await extractBookingTokensAndRgsCodes("BookingArray.json");
-await makeMultipleBookings(bookingTokensAndRgsCodesArray);
-}
-
-async function saveRestaurantDetails()
-{
-await connectToMongoDB();
-
+async function main() {
+  await getBookingTokenArray();
+  const bookingTokensAndRgsCodesArray = await extractBookingTokensAndRgsCodes("BookingArray.json");
+  await makeMultipleBookings(bookingTokensAndRgsCodesArray);
 }
 
 //--------------------------------------------
@@ -179,4 +192,3 @@ await connectToMongoDB();
 //--------------------------------------------
 
 main();
-//saveRestaurantDetails();
