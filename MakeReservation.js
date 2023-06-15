@@ -66,19 +66,19 @@ var MakeBaseUrl ='https://api.resy.com/3/book';
 var lat = '40.722653';
 var long = '-73.998739';
 
-var day = "2023-07-02";
+var day = "2023-06-16";
 var EarliestTime ="18:30:00"
 var LatestTime ="20:00:00"
 //This will need to be updated per restaurant
 let timeArray=["18:30:00","18:45:00","19:00:00","19:15:00","19:30:00","19:45:00","20:00:00"];
 var partySize = '4';
 //var venueIdTemplateNum='60058/2122015/2';//monkeybar
-//var venueIdTemplateNum='66436/1943671/2';//empellon //NEED TO TURN THIS INTO ARRAY OF ALL POSSIBLE COMBOS
-//var tableType='Outside';//empellon
+var venueIdTemplateNum='66436/1943671/2';//empellon //NEED TO TURN THIS INTO ARRAY OF ALL POSSIBLE COMBOS
+var tableType='Outside';//empellon
 //var venueIdTemplateNum='64593/1993073/2' //TOrrissi
 //var tableType='Dining Room'//for Torrissi
-var venueIdTemplateNum='834/2078816/2';//4charles
-var tableType='Dining Room';//4charles
+//var venueIdTemplateNum='834/2078816/2';//4charles
+//var tableType='Dining Room';//4charles
 
 const rgsCodesArray = timeArray.map(time => `rgs://resy/${venueIdTemplateNum}/${day}/${day}/${time}/${partySize}/${tableType}`);
 var bookToken;
@@ -187,7 +187,7 @@ async function main() {
 //--------------------------------------------
 //---------RUN THE JOB-----------------------
 //Cron Job Schedules the tasks
-//cron.schedule('3 0 10 * * *', main);
+//cron.schedule('0 9 * * 1', main);
 //--------------------------------------------
 
 main();
